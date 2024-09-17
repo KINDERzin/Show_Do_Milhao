@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShowDoMilhao.MainPage">
+
+    <VerticalStackLayout>
+        <Image Source=""/>
+
+        <Label Text="Pergunta" 
+               TextColor="Black" 
+               FontSize="14"/>
+
+        <Button Text="Resposta1"
+                x:Name="Resposta01"
+                BackgroundColor="AliceBlue"
+                TextColor="White"
+                FontSize="12"/>
+
+        <Button Text="Resposta2"
+                x:Name="Resposta02"
+                BackgroundColor="AliceBlue"
+                TextColor="White"
+                FontSize="12"/>
+                
+        <Button Text="Resposta3"
+                x:Name="Resposta03"
+                BackgroundColor="AliceBlue"
+                TextColor="White"
+                FontSize="12"/>
+                
+        <Button Text="Resposta4"
+                x:Name="Resposta04"
+                BackgroundColor="AliceBlue"
+                TextColor="White"
+                FontSize="12"/>
+                
+        <Button Text="Resposta5"
+                x:Name="Resposta05"
+                BackgroundColor="AliceBlue"
+                TextColor="White"
+                FontSize="12"/>
+
+        <HorizontalStackLayout>
+            <Button BackgroundColor="White"
+                    TextColor="Black"/>
+                    
+            <Button BackgroundColor="White"
+                    TextColor="Black"/>
+                    
+            <Button BackgroundColor="White"
+                    TextColor="Black"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>
