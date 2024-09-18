@@ -14,26 +14,26 @@ public class Questao{
 
     private Label LabelPergunta;
 
-    private Button Button1;
-    private Button Button2;
-    private Button Button3;
-    private Button Button4;
-    private Button Button5;
+    private Button ButtonResposta1;
+    private Button ButtonResposta2;
+    private Button ButtonResposta3;
+    private Button ButtonResposta4;
+    private Button ButtonResposta5;
 
     public Questao(){
 
     }
 
-    /*public void DesenhaTela(Label labelpergunta, Button1 buttonresposta1, Button2 buttonresposta2, Button3 buttonresposta3, Button4 buttonresposta4, Button5 buttonresposta5){
-        LabelPergunta = LabelPergunta;
-        Button1 = buttonresposta1;
-        Button2 = buttonresposta2;
-        Button3 = buttonresposta3;
-        Button4 = buttonresposta4;
-        Button5 = buttonresposta5;
+    public void DesenhaTela(Label labelPergunta, Button buttonResposta1, Button buttonResposta2, Button buttonResposta3, Button buttonResposta4, Button buttonResposta5){
+        LabelPergunta = labelPergunta;
+        ButtonResposta1 = buttonResposta1;
+        ButtonResposta2 = buttonResposta2;
+        ButtonResposta3 = buttonResposta3;
+        ButtonResposta4 = buttonResposta4;
+        ButtonResposta5 = buttonResposta5;
     }
 
-    public void VerificatResposta(int respostaSelecionada){
+    /*public void VerificatResposta(int respostaSelecionada){
         if RespostaCerta = respostaSelecionada;
         {
 
@@ -42,34 +42,34 @@ public class Questao{
 
     private Button QualButton(int r){
         if(r == 1){
-            return Button1;
+            return ButtonResposta1;
         }
         else if(r == 2){
-            return Button2;
+            return ButtonResposta2;
         }
         else if (r == 3){
-            return Button3;
+            return ButtonResposta3;
         }
         else if (r == 4){
-            return Button4;
+            return ButtonResposta4;
         }
         else if (r == 5 ){
-            return Button5;
+            return ButtonResposta5;
         }
         else{
             return null;
         }
     }
 
-    public bool VerificaResposta(int r){
-        if(RespostaCerta == r){
-            var button = QualButton(r);
+    public bool VerificaResposta(int rr){
+        if(RespostaCerta == rr){
+            var button = QualButton(rr);
             button.BackgroundColor = Colors.Green; //"#a1c9ae";
             return true;
         }
         else{
             var buttonCorreto = QualButton(RespostaCerta);
-            var buttonIncorreto = QualButton(r);
+            var buttonIncorreto = QualButton(rr);
             buttonCorreto.BackgroundColor = Colors.Green; //"#a1c9ae";
             buttonIncorreto.BackgroundColor = Colors.Red; //#e88e8e;
 

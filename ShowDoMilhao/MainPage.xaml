@@ -2,95 +2,133 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShowDoMilhao.MainPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Black">
 
-        <Grid>
-                <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                </Grid.ColumnDefinitions>
-        
-                <Image Source="image.png"
-                       Grid.Row="0"
-                       Grid.Column="0"
-                       Grid.ColumnSpan="3"/>
+        <ScrollView>
+                <Grid>
+                        <Grid.RowDefinitions>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="AUTO"/>
+                                <ColumnDefinition Width="AUTO"/>
+                                <ColumnDefinition Width="AUTO"/>
+                        </Grid.ColumnDefinitions>
+                
+                        <Image Source="show_do_milhao.png"
+                        Aspect="AspectFill"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"/>
 
-                <Label Text="Pergunta" 
-                       TextColor="Black" 
-                       FontSize="14"
-                       Grid.Row="1"
-                       Grid.Column="0"
-                       Grid.ColumnSpan="3"/>
-
-                <Button Text="Resposta1"
-                        x:Name="Resposta01"
-                        BackgroundColor="AliceBlue"
-                        TextColor="White"
-                        FontSize="12"
+                        <Label Text="Pergunta:" 
+                        TextColor="White" 
+                        FontSize="18"
+                        FontFamily="StalystaPersonal"
+                        Margin="10,5"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="3"/>
+                        
+                        <Frame BackgroundColor="Black"
+                        Margin="10,5"
                         Grid.Row="2"
                         Grid.Column="0"
-                        Grid.ColumnSpan="3"/>
+                        Grid.ColumnSpan="3">
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris nec dui sapien. Aenean in purus justo." 
+                        TextColor="White" 
+                        FontSize="14"
+                        MaximumWidthRequest="500"
+                        FontFamily="StalystaPersonal"/>
+                        </Frame>
 
-                <Button Text="Resposta2"
-                        x:Name="Resposta02"
-                        BackgroundColor="AliceBlue"
-                        TextColor="White"
-                        FontSize="12"
-                        Grid.Row="3"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"/>
-                        
-                <Button Text="Resposta3"
-                        x:Name="Resposta03"
-                        BackgroundColor="AliceBlue"
-                        TextColor="White"
-                        FontSize="12"
-                        Grid.Row="4"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"/>
-                        
-                <Button Text="Resposta4"
-                        x:Name="Resposta04"
-                        BackgroundColor="AliceBlue"
-                        TextColor="White"
-                        FontSize="12"
-                        Grid.Row="5"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"/>
-                        
-                <Button Text="Resposta5"
-                        x:Name="Resposta05"
-                        BackgroundColor="AliceBlue"
-                        TextColor="White"
-                        FontSize="12"
-                        Grid.Row="6"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="3"/>
+                        <Button Text="Praesent sit amet sollicitudin elit"
+                                x:Name="Resposta01"
+                                BackgroundColor="Black"
+                                BorderColor="White"
+                                BorderWidth="1"
+                                Margin="10,5"
+                                TextColor="White"
+                                FontSize="12"
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="3"/>
 
-                <Button BackgroundColor="White"
-                        TextColor="Black"
-                        Grid.Row="7"
-                        Grid.Column="0"/>
-                        
-                <Button BackgroundColor="White"
-                        TextColor="Black"
-                        Grid.Row="7"
-                        Grid.Column="1"/>
-                        
-                <Button BackgroundColor="White"
-                        TextColor="Black"
-                        Grid.Row="7"
-                        Grid.Column="2"/>
-        </Grid>
+                        <Button Text="Donec in ante vel dui vehicula hendrerit"
+                                x:Name="Resposta02"
+                                BackgroundColor="Black"
+                                BorderColor="White"
+                                BorderWidth="1"
+                                Margin="10,5"
+                                TextColor="White"
+                                FontSize="12"
+                                Grid.Row="4"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="3"/>
+                                
+                        <Button Text="Nulla tincidunt est eget sollicitudin dapibus"
+                                x:Name="Resposta03"
+                                BackgroundColor="Black"
+                                BorderColor="White"
+                                BorderWidth="1"
+                                Margin="10,5"
+                                TextColor="White"
+                                FontSize="12"
+                                Grid.Row="5"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="3"/>
+                                
+                        <Button Text="Etiam imperdiet ex non lorem commodo, in porta nulla elementum"
+                                x:Name="Resposta04"
+                                BackgroundColor="Black"
+                                BorderColor="White"
+                                BorderWidth="1"
+                                Margin="10,5"
+                                TextColor="White"
+                                FontSize="12"
+                                Grid.Row="6"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="3"/>
+                                
+                        <Button Text="Nunc posuere urna vitae felis feugiat, in lobortis nisi accumsan"
+                                x:Name="Resposta05"
+                                BackgroundColor="Black"
+                                BorderColor="White"
+                                BorderWidth="1"
+                                Margin="10,5"
+                                TextColor="White"
+                                FontSize="12"
+                                Grid.Row="7"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="3"/>
+
+                        <Button BackgroundColor="white"
+                                ImageSource="right_arrow.png"
+                                TextColor="Black"
+                                Margin="10, 10, 5,10"
+                                Grid.Row="8"
+                                Grid.Column="0"/>
+                                
+                        <Button BackgroundColor="White"
+                                TextColor="Black"
+                                Margin="5,10"
+                                Grid.Row="8"
+                                Grid.Column="1"/>
+                                
+                        <Button BackgroundColor="White"
+                                TextColor="Black"
+                                Margin="5, 10, 10, 10"
+                                Grid.Row="8"
+                                Grid.Column="2"/>
+                </Grid>
+        </ScrollView>
 </ContentPage>
