@@ -21,24 +21,35 @@ public class Questao{
     private Button ButtonResposta5;
 
     public Questao(){
-
+        
     }
 
-    public void DesenhaTela(Label labelPergunta, Button buttonResposta1, Button buttonResposta2, Button buttonResposta3, Button buttonResposta4, Button buttonResposta5){
-        LabelPergunta = labelPergunta;
-        ButtonResposta1 = buttonResposta1;
-        ButtonResposta2 = buttonResposta2;
-        ButtonResposta3 = buttonResposta3;
-        ButtonResposta4 = buttonResposta4;
-        ButtonResposta5 = buttonResposta5;
+    public Questao(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5){
+        LabelPergunta = labelpergunta;
+        ButtonResposta1 = button1;
+        ButtonResposta2 = button2;
+        ButtonResposta3 = button3;
+        ButtonResposta4 = button4;
+        ButtonResposta5 = button5;
     }
 
-    /*public void VerificatResposta(int respostaSelecionada){
-        if RespostaCerta = respostaSelecionada;
-        {
+    public void ConfiguraEstruturaDesenho (Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5){
+        LabelPergunta = labelpergunta;
+        ButtonResposta1 = button1;
+        ButtonResposta2 = button2;
+        ButtonResposta3 = button3;
+        ButtonResposta4 = button4;
+        ButtonResposta5 = button5;
+    }
 
-        }
-    }*/
+    public void Desenhar(){
+        LabelPergunta.Text = Pergunta;
+        ButtonResposta1.Text = Resposta1;
+        ButtonResposta2.Text = Resposta2;
+        ButtonResposta3.Text = Resposta3;
+        ButtonResposta4.Text = Resposta4;
+        ButtonResposta5.Text = Resposta5;
+    }
 
     private Button QualButton(int r){
         if(r == 1){
