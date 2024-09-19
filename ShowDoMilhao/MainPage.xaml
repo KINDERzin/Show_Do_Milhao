@@ -45,14 +45,17 @@
                                Grid.Column="0"
                                Grid.ColumnSpan="3">
                                 <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris nec dui sapien. Aenean in purus justo." 
+                                       x:Name="labelPergunta"
+                                       HorizontalTextAlignment="Center"
                                        TextColor="White" 
-                                       FontSize="14"
+                                       FontSize="16"
                                        MaximumWidthRequest="500"
                                        FontFamily="StalystaPersonal"/>
                         </Frame>
 
                         <Button Text="Praesent sit amet sollicitudin elit"
                                 x:Name="Resposta01"
+                                Clicked="clicouBotaoResposta01"
                                 BackgroundColor="Black"
                                 BorderColor="White"
                                 BorderWidth="1"
@@ -65,6 +68,7 @@
 
                         <Button Text="Donec in ante vel dui vehicula hendrerit"
                                 x:Name="Resposta02"
+                                Clicked="clicouBotaoResposta02"
                                 BackgroundColor="Black"
                                 BorderColor="White"
                                 BorderWidth="1"
@@ -77,6 +81,7 @@
                                 
                         <Button Text="Nulla tincidunt est eget sollicitudin dapibus"
                                 x:Name="Resposta03"
+                                Clicked="clicouBotaoResposta03"
                                 BackgroundColor="Black"
                                 BorderColor="White"
                                 BorderWidth="1"
@@ -89,6 +94,7 @@
                                 
                         <Button Text="Etiam imperdiet ex non lorem commodo, in porta nulla elementum"
                                 x:Name="Resposta04"
+                                Clicked="clicouBotaoResposta04"
                                 BackgroundColor="Black"
                                 BorderColor="White"
                                 BorderWidth="1"
@@ -101,6 +107,7 @@
                                 
                         <Button Text="Nunc posuere urna vitae felis feugiat, in lobortis nisi accumsan"
                                 x:Name="Resposta05"
+                                Clicked="clicouBotaoResposta05"
                                 BackgroundColor="Black"
                                 BorderColor="White"
                                 BorderWidth="1"
@@ -112,19 +119,22 @@
                                 Grid.ColumnSpan="3"/>
 
                         <Button BackgroundColor="Black"
-                                ImageSource="right_arrow.png"
+                                ImageSource="universitario.png"
                                 TextColor="Black"
                                 Margin="10, 10, 5,10"
                                 Grid.Row="8"
                                 Grid.Column="0"/>
                                 
                         <Button BackgroundColor="Black"
+                                ImageSource="right_arrow.png"
+                                MaximumWidthRequest="64"
                                 TextColor="Black"
                                 Margin="5,10"
                                 Grid.Row="8"
                                 Grid.Column="1"/>
                                 
                         <Button BackgroundColor="Black"
+                                ImageSource="cartas.png"
                                 TextColor="Black"
                                 Margin="5, 10, 10, 10"
                                 Grid.Row="8"

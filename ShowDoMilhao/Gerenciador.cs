@@ -1,4 +1,4 @@
-using Show_Do_Milhao;
+using ShowDoMilhao;
 
 namespace ShowDoMilhao;
 
@@ -145,7 +145,6 @@ public class Gerenciador{
         q11.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q11);
 
-        // 12
         var q12 = new Questao();
         q12.Pergunta = "Qual animal é conhecido como o 'rei da selva'?";
         q12.Resposta1 = "Elefante";
@@ -158,7 +157,6 @@ public class Gerenciador{
         q12.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q12);
 
-        // 13
         var q13 = new Questao();
         q13.Pergunta = "Qual é a moeda do Japão?";
         q13.Resposta1 = "Yuan";
@@ -171,7 +169,6 @@ public class Gerenciador{
         q13.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q13);
 
-        // 14
         var q14 = new Questao();
         q14.Pergunta = "Qual é o nome do famoso relógio de Londres?";
         q14.Resposta1 = "Big Ben";
@@ -184,7 +181,6 @@ public class Gerenciador{
         q14.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q14);
 
-        // 15
         var q15 = new Questao();
         q15.Pergunta = "Quem é o autor de 'A Moreninha'?";
         q15.Resposta1 = "Joaquim Manuel de Macedo";
@@ -197,7 +193,6 @@ public class Gerenciador{
         q15.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q15);
 
-        // 16
         var q16 = new Questao();
         q16.Pergunta = "Qual planeta é conhecido como o 'planeta vermelho'?";
         q16.Resposta1 = "Marte";
@@ -210,7 +205,6 @@ public class Gerenciador{
         q16.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q16);
 
-        // 17
         var q17 = new Questao();
         q17.Pergunta = "Qual é o maior mamífero do mundo?";
         q17.Resposta1 = "Elefante";
@@ -223,7 +217,6 @@ public class Gerenciador{
         q17.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q17);
 
-        // 18
         var q18 = new Questao();
         q18.Pergunta = "Qual é a capital da Itália?";
         q18.Resposta1 = "Roma";
@@ -236,7 +229,6 @@ public class Gerenciador{
         q18.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q18);
 
-        // 19
         var q19 = new Questao();
         q19.Pergunta = "Quem descobriu a penicilina?";
         q19.Resposta1 = "Louis Pasteur";
@@ -249,7 +241,6 @@ public class Gerenciador{
         q19.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q19);
 
-        // 20
         var q20 = new Questao();
         q20.Pergunta = "Qual é o país famoso por seus cangurus?";
         q20.Resposta1 = "Austrália";
@@ -262,7 +253,6 @@ public class Gerenciador{
         q20.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q20);
 
-        // 21
         var q21 = new Questao();
         q21.Pergunta = "Qual é a principal religião da Índia?";
         q21.Resposta1 = "Cristianismo";
@@ -275,7 +265,6 @@ public class Gerenciador{
         q21.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q21);
 
-        // 22
         var q22 = new Questao();
         q22.Pergunta = "Qual é a língua oficial do Brasil?";
         q22.Resposta1 = "Espanhol";
@@ -288,7 +277,6 @@ public class Gerenciador{
         q22.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q22);
 
-        // 23
         var q23 = new Questao();
         q23.Pergunta = "Qual é o menor país do mundo?";
         q23.Resposta1 = "Mônaco";
@@ -301,7 +289,6 @@ public class Gerenciador{
         q23.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q23);
 
-        // 24
         var q24 = new Questao();
         q24.Pergunta = "Quem foi o primeiro homem a pisar na Lua?";
         q24.Resposta1 = "Buzz Aldrin";
@@ -314,7 +301,6 @@ public class Gerenciador{
         q24.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q24);
 
-        // 25
         var q25 = new Questao();
         q25.Pergunta = "Qual é o símbolo químico do ferro?";
         q25.Resposta1 = "Fe";
@@ -334,10 +320,11 @@ public class Gerenciador{
         q26.Resposta3 = "Floresta Boreal";
         q26.Resposta4 = "Floresta da Taiga";
         q26.Resposta5 = "Floresta Atlântica";
+
         q26.RespostaCerta = 1;
+        q26.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q26);
 
-        // 27
         var q27 = new Questao();
         q27.Pergunta = "Quem foi o autor de 'A Divina Comédia'?";
         q27.Resposta1 = "Virgílio";
@@ -345,10 +332,11 @@ public class Gerenciador{
         q27.Resposta3 = "Homero";
         q27.Resposta4 = "Shakespeare";
         q27.Resposta5 = "Cervantes";
+
         q27.RespostaCerta = 2;
+        q27.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q27);
 
-        // 28
         var q28 = new Questao();
         q28.Pergunta = "Qual é o rio mais longo do mundo?";
         q28.Resposta1 = "Rio Nilo";
@@ -356,10 +344,11 @@ public class Gerenciador{
         q28.Resposta3 = "Rio Yangtze";
         q28.Resposta4 = "Rio Mississippi";
         q28.Resposta5 = "Rio Mekong";
+
         q28.RespostaCerta = 1;
+        q28.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q28);
 
-        // 29
         var q29 = new Questao();
         q29.Pergunta = "Qual é a montanha mais alta do mundo?";
         q29.Resposta1 = "K2";
@@ -367,10 +356,11 @@ public class Gerenciador{
         q29.Resposta3 = "Everest";
         q29.Resposta4 = "Lhotse";
         q29.Resposta5 = "Makalu";
+
         q29.RespostaCerta = 3;
+        q29.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q29);
 
-        // 30
         var q30 = new Questao();
         q30.Pergunta = "Qual é o maior deserto do mundo?";
         q30.Resposta1 = "Deserto do Saara";
@@ -378,10 +368,11 @@ public class Gerenciador{
         q30.Resposta3 = "Deserto de Atacama";
         q30.Resposta4 = "Deserto da Antártica";
         q30.Resposta5 = "Deserto do Kalahari";
+
         q30.RespostaCerta = 4;
+        q30.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q30);
 
-        // 31
         var q31 = new Questao();
         q31.Pergunta = "Qual é a principal vitamina encontrada nas laranjas?";
         q31.Resposta1 = "Vitamina A";
@@ -389,10 +380,11 @@ public class Gerenciador{
         q31.Resposta3 = "Vitamina C";
         q31.Resposta4 = "Vitamina D";
         q31.Resposta5 = "Vitamina E";
+
         q31.RespostaCerta = 3;
+        q31.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q31);
 
-        // 32
         var q32 = new Questao();
         q32.Pergunta = "Qual animal é conhecido por sua habilidade de imitar sons?";
         q32.Resposta1 = "Papagaio";
@@ -400,10 +392,11 @@ public class Gerenciador{
         q32.Resposta3 = "Gato";
         q32.Resposta4 = "Cavalo";
         q32.Resposta5 = "Coelho";
+
         q32.RespostaCerta = 1;
+        q32.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q32);
 
-        // 33
         var q33 = new Questao();
         q33.Pergunta = "Qual é o nome da maior cadeia de montanhas do mundo?";
         q33.Resposta1 = "Andes";
@@ -411,10 +404,11 @@ public class Gerenciador{
         q33.Resposta3 = "Alpes";
         q33.Resposta4 = "Rocosas";
         q33.Resposta5 = "Pirineus";
+
         q33.RespostaCerta = 2;
+        q33.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q33);
 
-        // 34
         var q34 = new Questao();
         q34.Pergunta = "Quem é conhecido como o 'pai da psicanálise'?";
         q34.Resposta1 = "Carl Jung";
@@ -422,10 +416,11 @@ public class Gerenciador{
         q34.Resposta3 = "B.F. Skinner";
         q34.Resposta4 = "Wilhelm Wundt";
         q34.Resposta5 = "Jean Piaget";
+
         q34.RespostaCerta = 2;
+        q34.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q34);
 
-        // 35
         var q35 = new Questao();
         q35.Pergunta = "Qual é a capital da Espanha?";
         q35.Resposta1 = "Barcelona";
@@ -433,10 +428,11 @@ public class Gerenciador{
         q35.Resposta3 = "Sevilha";
         q35.Resposta4 = "Valência";
         q35.Resposta5 = "Bilbau";
+
         q35.RespostaCerta = 2;
+        q35.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q35);
 
-        // 36
         var q36 = new Questao();
         q36.Pergunta = "Qual é o nome do continente onde está a maioria dos países árabes?";
         q36.Resposta1 = "Ásia";
@@ -444,10 +440,11 @@ public class Gerenciador{
         q36.Resposta3 = "Europa";
         q36.Resposta4 = "América do Sul";
         q36.Resposta5 = "Oceania";
+
         q36.RespostaCerta = 1;
+        q36.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q36);
 
-        // 37
         var q37 = new Questao();
         q37.Pergunta = "Qual é o nome do famoso festival de música que acontece em Woodstock?";
         q37.Resposta1 = "Lollapalooza";
@@ -455,10 +452,11 @@ public class Gerenciador{
         q37.Resposta3 = "Glastonbury";
         q37.Resposta4 = "Woodstock";
         q37.Resposta5 = "Tomorrowland";
+
         q37.RespostaCerta = 4;
+        q37.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q37);
 
-        // 38
         var q38 = new Questao();
         q38.Pergunta = "Qual é o principal gás encontrado na atmosfera terrestre?";
         q38.Resposta1 = "Oxigênio";
@@ -466,10 +464,11 @@ public class Gerenciador{
         q38.Resposta3 = "Nitrogênio";
         q38.Resposta4 = "Hélio";
         q38.Resposta5 = "Argônio";
+
         q38.RespostaCerta = 3;
+        q38.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q38);
 
-        // 39
         var q39 = new Questao();
         q39.Pergunta = "Qual é o nome do famoso quadro de Edvard Munch?";
         q39.Resposta1 = "A Noite Estrelada";
@@ -477,10 +476,11 @@ public class Gerenciador{
         q39.Resposta3 = "O Beijo";
         q39.Resposta4 = "A Persistência da Memória";
         q39.Resposta5 = "Guernica";
+
         q39.RespostaCerta = 2;
+        q39.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q39);
 
-        // 40
         var q40 = new Questao();
         q40.Pergunta = "Qual é a capital da Rússia?";
         q40.Resposta1 = "São Petersburgo";
@@ -488,10 +488,11 @@ public class Gerenciador{
         q40.Resposta3 = "Kiev";
         q40.Resposta4 = "Minsk";
         q40.Resposta5 = "Tóquio";
+
         q40.RespostaCerta = 2;
+        q40.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q40);
 
-        // 41
         var q41 = new Questao();
         q41.Pergunta = "Qual é o maior mamífero terrestre?";
         q41.Resposta1 = "Rinoceronte";
@@ -499,10 +500,11 @@ public class Gerenciador{
         q41.Resposta3 = "Girafa";
         q41.Resposta4 = "Urso Polar";
         q41.Resposta5 = "Hipopótamo";
+
         q41.RespostaCerta = 2;
+        q41.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q41);
 
-        // 42
         var q42 = new Questao();
         q42.Pergunta = "Quem foi o primeiro presidente dos Estados Unidos?";
         q42.Resposta1 = "Abraham Lincoln";
@@ -510,10 +512,11 @@ public class Gerenciador{
         q42.Resposta3 = "Thomas Jefferson";
         q42.Resposta4 = "Franklin D. Roosevelt";
         q42.Resposta5 = "John Adams";
+
         q42.RespostaCerta = 2;
+        q42.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q42);
 
-        // 43
         var q43 = new Questao();
         q43.Pergunta = "Qual é a capital da Argentina?";
         q43.Resposta1 = "Buenos Aires";
@@ -521,10 +524,11 @@ public class Gerenciador{
         q43.Resposta3 = "Santiago";
         q43.Resposta4 = "Montevidéu";
         q43.Resposta5 = "Lima";
+
         q43.RespostaCerta = 1;
+        q43.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q43);
 
-        // 44
         var q44 = new Questao();
         q44.Pergunta = "Qual é a primeira letra do alfabeto grego?";
         q44.Resposta1 = "Beta";
@@ -532,10 +536,11 @@ public class Gerenciador{
         q44.Resposta3 = "Gama";
         q44.Resposta4 = "Delta";
         q44.Resposta5 = "Épsilon";
+
         q44.RespostaCerta = 2;
+        q44.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q44);
 
-        // 45
         var q45 = new Questao();
         q45.Pergunta = "Qual é o nome do famoso personagem de Sherlock Holmes?";
         q45.Resposta1 = "Dr. Watson";
@@ -543,10 +548,11 @@ public class Gerenciador{
         q45.Resposta3 = "Philip Marlowe";
         q45.Resposta4 = "James Bond";
         q45.Resposta5 = "Miss Marple";
+
         q45.RespostaCerta = 1;
+        q45.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q45);
 
-        // 46
         var q46 = new Questao();
         q46.Pergunta = "Qual é a capital do Egito?";
         q46.Resposta1 = "Cairo";
@@ -554,10 +560,11 @@ public class Gerenciador{
         q46.Resposta3 = "Riad";
         q46.Resposta4 = "Beirute";
         q46.Resposta5 = "Cartum";
+
         q46.RespostaCerta = 1;
+        q46.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q46);
 
-        // 47
         var q47 = new Questao();
         q47.Pergunta = "Qual é a moeda da União Europeia?";
         q47.Resposta1 = "Dólar";
@@ -565,10 +572,11 @@ public class Gerenciador{
         q47.Resposta3 = "Euro";
         q47.Resposta4 = "Franco";
         q47.Resposta5 = "Yen";
+
         q47.RespostaCerta = 3;
+        q47.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q47);
 
-        // 48
         var q48 = new Questao();
         q48.Pergunta = "Qual é o famoso festival de música que acontece na Alemanha?";
         q48.Resposta1 = "Oktoberfest";
@@ -576,10 +584,11 @@ public class Gerenciador{
         q48.Resposta3 = "Tomorrowland";
         q48.Resposta4 = "Coachella";
         q48.Resposta5 = "Lollapalooza";
+
         q48.RespostaCerta = 1;
+        q48.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q48);
 
-        // 49
         var q49 = new Questao();
         q49.Pergunta = "Qual é o nome do famoso físico que formulou a teoria da relatividade?";
         q49.Resposta1 = "Isaac Newton";
@@ -587,10 +596,11 @@ public class Gerenciador{
         q49.Resposta3 = "Galileu Galilei";
         q49.Resposta4 = "Stephen Hawking";
         q49.Resposta5 = "Nikola Tesla";
+
         q49.RespostaCerta = 2;
+        q49.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q49);
 
-        // 50
         var q50 = new Questao();
         q50.Pergunta = "Qual é o país famoso por seus chocolates e relógios?";
         q50.Resposta1 = "Alemanha";
@@ -598,10 +608,11 @@ public class Gerenciador{
         q50.Resposta3 = "Suíça";
         q50.Resposta4 = "Bélgica";
         q50.Resposta5 = "Holanda";
+
         q50.RespostaCerta = 3;
+        q50.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q50);
 
-        // 51
         var q51 = new Questao();
         q51.Pergunta = "Qual é a capital do Canadá?";
         q51.Resposta1 = "Toronto";
@@ -609,10 +620,11 @@ public class Gerenciador{
         q51.Resposta3 = "Ottawa";
         q51.Resposta4 = "Montreal";
         q51.Resposta5 = "Calgary";
+
         q51.RespostaCerta = 3;
+        q51.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q51);
 
-        // 52
         var q52 = new Questao();
         q52.Pergunta = "Qual é o nome do famoso carro esportivo da Ferrari?";
         q52.Resposta1 = "Mustang";
@@ -620,10 +632,11 @@ public class Gerenciador{
         q52.Resposta3 = "F40";
         q52.Resposta4 = "Corvette";
         q52.Resposta5 = "Porsche 911";
+
         q52.RespostaCerta = 3;
+        q52.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q52);
 
-        // 53
         var q53 = new Questao();
         q53.Pergunta = "Qual é o país conhecido por sua cultura do chá?";
         q53.Resposta1 = "Índia";
@@ -631,10 +644,11 @@ public class Gerenciador{
         q53.Resposta3 = "China";
         q53.Resposta4 = "Reino Unido";
         q53.Resposta5 = "Turquia";
+
         q53.RespostaCerta = 3;
+        q53.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q53);
 
-        // 54
         var q54 = new Questao();
         q54.Pergunta = "Qual é o nome do sistema de governo onde o poder é exercido pelo povo?";
         q54.Resposta1 = "Monarquia";
@@ -642,10 +656,11 @@ public class Gerenciador{
         q54.Resposta3 = "República";
         q54.Resposta4 = "Democracia";
         q54.Resposta5 = "Teocracia";
+
         q54.RespostaCerta = 4;
+        q54.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q54);
 
-        // 55
         var q55 = new Questao();
         q55.Pergunta = "Qual é a fórmula da glicose?";
         q55.Resposta1 = "C6H12O6";
@@ -653,10 +668,11 @@ public class Gerenciador{
         q55.Resposta3 = "NaCl";
         q55.Resposta4 = "H2O";
         q55.Resposta5 = "CO2";
+
         q55.RespostaCerta = 1;
+        q55.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q55);
 
-        // 56
         var q56 = new Questao();
         q56.Pergunta = "Qual é a capital da Alemanha?";
         q56.Resposta1 = "Berlim";
@@ -664,10 +680,11 @@ public class Gerenciador{
         q56.Resposta3 = "Frankfurt";
         q56.Resposta4 = "Hamburgo";
         q56.Resposta5 = "Colônia";
+
         q56.RespostaCerta = 1;
+        q56.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q56);
 
-        // 57
         var q57 = new Questao();
         q57.Pergunta = "Qual é a capital da Grécia?";
         q57.Resposta1 = "Atenas";
@@ -675,10 +692,11 @@ public class Gerenciador{
         q57.Resposta3 = "Heraclión";
         q57.Resposta4 = "Patras";
         q57.Resposta5 = "Náuplia";
+
         q57.RespostaCerta = 1;
+        q57.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q57);
 
-        // 58
         var q58 = new Questao();
         q58.Pergunta = "Qual é o maior lago do mundo?";
         q58.Resposta1 = "Lago Superior";
@@ -686,10 +704,11 @@ public class Gerenciador{
         q58.Resposta3 = "Lago Vitória";
         q58.Resposta4 = "Mar Cáspio";
         q58.Resposta5 = "Lago Tanganica";
+
         q58.RespostaCerta = 4;
+        q58.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q58);
 
-        // 59
         var q59 = new Questao();
         q59.Pergunta = "Qual é a língua oficial da China?";
         q59.Resposta1 = "Inglês";
@@ -697,10 +716,11 @@ public class Gerenciador{
         q59.Resposta3 = "Cantonês";
         q59.Resposta4 = "Tibetano";
         q59.Resposta5 = "Hakka";
+
         q59.RespostaCerta = 2;
+        q59.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q59);
 
-        // 60
         var q60 = new Questao();
         q60.Pergunta = "Qual é o famoso monumento de Paris?";
         q60.Resposta1 = "Torre Eiffel";
@@ -708,10 +728,11 @@ public class Gerenciador{
         q60.Resposta3 = "Torre de Pisa";
         q60.Resposta4 = "Big Ben";
         q60.Resposta5 = "Estátua da Liberdade";
+
         q60.RespostaCerta = 1;
+        q60.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q60);
 
-        // 61
         var q61 = new Questao();
         q61.Pergunta = "Qual é o elemento químico com símbolo Na?";
         q61.Resposta1 = "Sódio";
@@ -719,10 +740,11 @@ public class Gerenciador{
         q61.Resposta3 = "Cloro";
         q61.Resposta4 = "Cálcio";
         q61.Resposta5 = "Fósforo";
+
         q61.RespostaCerta = 1;
+        q61.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q61);
 
-        // 62
         var q62 = new Questao();
         q62.Pergunta = "Qual é a capital do Brasil?";
         q62.Resposta1 = "Rio de Janeiro";
@@ -730,10 +752,11 @@ public class Gerenciador{
         q62.Resposta3 = "Brasília";
         q62.Resposta4 = "Belo Horizonte";
         q62.Resposta5 = "Salvador";
+
         q62.RespostaCerta = 3;
+        q62.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q62);
 
-        // 63
         var q63 = new Questao();
         q63.Pergunta = "Qual é o famoso documento que declarou a independência dos Estados Unidos?";
         q63.Resposta1 = "Constituição";
@@ -741,10 +764,11 @@ public class Gerenciador{
         q63.Resposta3 = "Declaração de Independência";
         q63.Resposta4 = "Bill of Rights";
         q63.Resposta5 = "Federalist Papers";
+
         q63.RespostaCerta = 3;
+        q63.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q63);
 
-        // 64
         var q64 = new Questao();
         q64.Pergunta = "Qual é o nome do movimento artístico que enfatizou a razão e a ciência?";
         q64.Resposta1 = "Romantismo";
@@ -752,10 +776,11 @@ public class Gerenciador{
         q64.Resposta3 = "Iluminismo";
         q64.Resposta4 = "Barroco";
         q64.Resposta5 = "Modernismo";
+
         q64.RespostaCerta = 3;
+        q64.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q64);
 
-        // 65
         var q65 = new Questao();
         q65.Pergunta = "Qual é o famoso romance de Jane Austen?";
         q65.Resposta1 = "Orgulho e Preconceito";
@@ -763,10 +788,11 @@ public class Gerenciador{
         q65.Resposta3 = "O Morro dos Ventos Uivantes";
         q65.Resposta4 = "Crime e Castigo";
         q65.Resposta5 = "A Revolução dos Bichos";
+
         q65.RespostaCerta = 1;
+        q65.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q65);
 
-        // 66
         var q66 = new Questao();
         q66.Pergunta = "Qual é o continente onde está localizado o deserto do Saara?";
         q66.Resposta1 = "África";
@@ -774,10 +800,11 @@ public class Gerenciador{
         q66.Resposta3 = "América do Sul";
         q66.Resposta4 = "Oceania";
         q66.Resposta5 = "Europa";
+
         q66.RespostaCerta = 1;
+        q66.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q66);
 
-        // 67
         var q67 = new Questao();
         q67.Pergunta = "Qual é a capital da Índia?";
         q67.Resposta1 = "Bombaim";
@@ -785,10 +812,11 @@ public class Gerenciador{
         q67.Resposta3 = "Calcutá";
         q67.Resposta4 = "Chennai";
         q67.Resposta5 = "Hyderabad";
+
         q67.RespostaCerta = 2;
+        q67.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q67);
 
-        // 68
         var q68 = new Questao();
         q68.Pergunta = "Qual é o maior oceano do mundo?";
         q68.Resposta1 = "Oceano Atlântico";
@@ -796,10 +824,11 @@ public class Gerenciador{
         q68.Resposta3 = "Oceano Índico";
         q68.Resposta4 = "Oceano Ártico";
         q68.Resposta5 = "Oceano Antártico";
+
         q68.RespostaCerta = 2;
+        q68.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q68);
 
-        // 69
         var q69 = new Questao();
         q69.Pergunta = "Qual é a capital da França?";
         q69.Resposta1 = "Londres";
@@ -807,10 +836,11 @@ public class Gerenciador{
         q69.Resposta3 = "Madri";
         q69.Resposta4 = "Paris";
         q69.Resposta5 = "Roma";
+
         q69.RespostaCerta = 4;
+        q69.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q69);
 
-        // 70
         var q70 = new Questao();
         q70.Pergunta = "Qual é o nome do primeiro satélite lançado ao espaço?";
         q70.Resposta1 = "Apollo 11";
@@ -818,10 +848,11 @@ public class Gerenciador{
         q70.Resposta3 = "Sputnik 1";
         q70.Resposta4 = "Explorer 1";
         q70.Resposta5 = "Hubble";
+
         q70.RespostaCerta = 3;
+        q70.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q70);
 
-        // 71
         var q71 = new Questao();
         q71.Pergunta = "Qual é a fórmula química da água?";
         q71.Resposta1 = "H2O";
@@ -829,10 +860,11 @@ public class Gerenciador{
         q71.Resposta3 = "NaCl";
         q71.Resposta4 = "C6H12O6";
         q71.Resposta5 = "CH4";
+
         q71.RespostaCerta = 1;
+        q71.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q71);
 
-        // 72
         var q72 = new Questao();
         q72.Pergunta = "Qual é a capital da Suécia?";
         q72.Resposta1 = "Estocolmo";
@@ -840,10 +872,11 @@ public class Gerenciador{
         q72.Resposta3 = "Oslo";
         q72.Resposta4 = "Copenhague";
         q72.Resposta5 = "Reykjavique";
+
         q72.RespostaCerta = 1;
+        q72.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q72);
 
-        // 73
         var q73 = new Questao();
         q73.Pergunta = "Qual é a moeda da Rússia?";
         q73.Resposta1 = "Dólar";
@@ -851,10 +884,11 @@ public class Gerenciador{
         q73.Resposta3 = "Rublo";
         q73.Resposta4 = "Yen";
         q73.Resposta5 = "Franco";
+
         q73.RespostaCerta = 3;
+        q73.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q73);
 
-        // 74
         var q74 = new Questao();
         q74.Pergunta = "Quem é o famoso personagem da Disney que é um pato?";
         q74.Resposta1 = "Pato Donald";
@@ -862,10 +896,11 @@ public class Gerenciador{
         q74.Resposta3 = "Pateta";
         q74.Resposta4 = "Pato Lucas";
         q74.Resposta5 = "Tico e Teco";
+
         q74.RespostaCerta = 1;
+        q74.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q74);
 
-        // 75
         var q75 = new Questao();
         q75.Pergunta = "Qual é o nome do famoso super-herói da Marvel que é um Homem de Ferro?";
         q75.Resposta1 = "Thor";
@@ -873,10 +908,11 @@ public class Gerenciador{
         q75.Resposta3 = "Hulk";
         q75.Resposta4 = "Iron Man";
         q75.Resposta5 = "Spider-Man";
+
         q75.RespostaCerta = 4;
+        q75.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q75);
 
-        // 76
         var q76 = new Questao();
         q76.Pergunta = "Qual é o nome do famoso cientista que descobriu a penicilina?";
         q76.Resposta1 = "Louis Pasteur";
@@ -884,10 +920,11 @@ public class Gerenciador{
         q76.Resposta3 = "Alexander Fleming";
         q76.Resposta4 = "Gregor Mendel";
         q76.Resposta5 = "Charles Darwin";
+
         q76.RespostaCerta = 3;
+        q76.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q76);
 
-        // 77
         var q77 = new Questao();
         q77.Pergunta = "Qual é o nome da famosa obra de arte de Leonardo da Vinci?";
         q77.Resposta1 = "A Última Ceia";
@@ -895,10 +932,11 @@ public class Gerenciador{
         q77.Resposta3 = "A Criação de Adão";
         q77.Resposta4 = "A Noite Estrelada";
         q77.Resposta5 = "O Grito";
+
         q77.RespostaCerta = 1;
+        q77.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q77);
 
-        // 78
         var q78 = new Questao();
         q78.Pergunta = "Qual é a capital da Nova Zelândia?";
         q78.Resposta1 = "Auckland";
@@ -906,10 +944,11 @@ public class Gerenciador{
         q78.Resposta3 = "Christchurch";
         q78.Resposta4 = "Hamilton";
         q78.Resposta5 = "Dunedin";
+
         q78.RespostaCerta = 2;
+        q78.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q78);
 
-        // 79
         var q79 = new Questao();
         q79.Pergunta = "Qual é o nome do famoso detetive criado por Arthur Conan Doyle?";
         q79.Resposta1 = "Hercule Poirot";
@@ -917,10 +956,11 @@ public class Gerenciador{
         q79.Resposta3 = "Sherlock Holmes";
         q79.Resposta4 = "Philip Marlowe";
         q79.Resposta5 = "Sam Spade";
+
         q79.RespostaCerta = 3;
+        q79.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q79);
 
-        // 80
         var q80 = new Questao();
         q80.Pergunta = "Qual é o principal ingrediente do guacamole?";
         q80.Resposta1 = "Tomate";
@@ -928,10 +968,11 @@ public class Gerenciador{
         q80.Resposta3 = "Abacate";
         q80.Resposta4 = "Pimentão";
         q80.Resposta5 = "Limão";
+
         q80.RespostaCerta = 3;
+        q80.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q80);
 
-        // 81
         var q81 = new Questao();
         q81.Pergunta = "Qual é a capital do Japão?";
         q81.Resposta1 = "Tóquio";
@@ -939,10 +980,11 @@ public class Gerenciador{
         q81.Resposta3 = "Pequim";
         q81.Resposta4 = "Banguecoque";
         q81.Resposta5 = "Hanoí";
+
         q81.RespostaCerta = 1;
+        q81.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q81);
 
-        // 82
         var q82 = new Questao();
         q82.Pergunta = "Qual é a famosa obra do dramaturgo William Shakespeare?";
         q82.Resposta1 = "Romeu e Julieta";
@@ -950,10 +992,11 @@ public class Gerenciador{
         q82.Resposta3 = "A Divina Comédia";
         q82.Resposta4 = "O Morro dos Ventos Uivantes";
         q82.Resposta5 = "Crime e Castigo";
+
         q82.RespostaCerta = 1;
+        q82.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q82);
 
-        // 83
         var q83 = new Questao();
         q83.Pergunta = "Qual é a capital da Turquia?";
         q83.Resposta1 = "Istambul";
@@ -961,10 +1004,11 @@ public class Gerenciador{
         q83.Resposta3 = "Izmir";
         q83.Resposta4 = "Antália";
         q83.Resposta5 = "Bursa";
+
         q83.RespostaCerta = 2;
+        q83.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q83);
 
-        // 84
         var q84 = new Questao();
         q84.Pergunta = "Qual é o famoso prato italiano feito com massa e molho?";
         q84.Resposta1 = "Sushi";
@@ -972,10 +1016,11 @@ public class Gerenciador{
         q84.Resposta3 = "Pizza";
         q84.Resposta4 = "Pasta";
         q84.Resposta5 = "Curry";
+
         q84.RespostaCerta = 4;
+        q84.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q84);
 
-        // 85
         var q85 = new Questao();
         q85.Pergunta = "Qual é a principal função do fígado no corpo humano?";
         q85.Resposta1 = "Respiração";
@@ -983,10 +1028,11 @@ public class Gerenciador{
         q85.Resposta3 = "Produção de hormônios";
         q85.Resposta4 = "Movimentação";
         q85.Resposta5 = "Digestão";
+
         q85.RespostaCerta = 2;
+        q85.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q85);
 
-        // 86
         var q86 = new Questao();
         q86.Pergunta = "Qual é o nome da famosa canção de John Lennon que fala sobre paz?";
         q86.Resposta1 = "Imagine";
@@ -994,10 +1040,11 @@ public class Gerenciador{
         q86.Resposta3 = "Let It Be";
         q86.Resposta4 = "Yesterday";
         q86.Resposta5 = "Come Together";
+
         q86.RespostaCerta = 1;
+        q86.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q86);
 
-        // 87
         var q87 = new Questao();
         q87.Pergunta = "Qual é a capital da Itália?";
         q87.Resposta1 = "Veneza";
@@ -1005,10 +1052,11 @@ public class Gerenciador{
         q87.Resposta3 = "Milão";
         q87.Resposta4 = "Florença";
         q87.Resposta5 = "Nápoles";
+
         q87.RespostaCerta = 2;
+        q87.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q87);
 
-        // 88
         var q88 = new Questao();
         q88.Pergunta = "Qual é o nome do famoso super-herói da DC que é um Homem Morcego?";
         q88.Resposta1 = "Superman";
@@ -1016,10 +1064,11 @@ public class Gerenciador{
         q88.Resposta3 = "Aquaman";
         q88.Resposta4 = "Flash";
         q88.Resposta5 = "Lanterna Verde";
+
         q88.RespostaCerta = 2;
+        q88.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q88);
 
-        // 89
         var q89 = new Questao();
         q89.Pergunta = "Qual é a capital da Coreia do Sul?";
         q89.Resposta1 = "Seul";
@@ -1027,10 +1076,11 @@ public class Gerenciador{
         q89.Resposta3 = "Tóquio";
         q89.Resposta4 = "Pequim";
         q89.Resposta5 = "Banguecoque";
+
         q89.RespostaCerta = 1;
+        q89.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q89);
 
-        // 90
         var q90 = new Questao();
         q90.Pergunta = "Qual é o nome do famoso deus da mitologia grega que é o deus do trovão?";
         q90.Resposta1 = "Zeus";
@@ -1038,10 +1088,11 @@ public class Gerenciador{
         q90.Resposta3 = "Hades";
         q90.Resposta4 = "Apolo";
         q90.Resposta5 = "Atena";
+
         q90.RespostaCerta = 1;
+        q90.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q90);
 
-        // 91
         var q91 = new Questao();
         q91.Pergunta = "Qual é a famosa obra de arte de Edvard Munch?";
         q91.Resposta1 = "A Noite Estrelada";
@@ -1049,10 +1100,11 @@ public class Gerenciador{
         q91.Resposta3 = "A Última Ceia";
         q91.Resposta4 = "O Nascimento de Vênus";
         q91.Resposta5 = "A Criação de Adão";
+
         q91.RespostaCerta = 2;
+        q91.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q91);
 
-        // 92
         var q92 = new Questao();
         q92.Pergunta = "Qual é a capital da Noruega?";
         q92.Resposta1 = "Oslo";
@@ -1060,10 +1112,11 @@ public class Gerenciador{
         q92.Resposta3 = "Helsinque";
         q92.Resposta4 = "Copenhague";
         q92.Resposta5 = "Reykjavique";
+
         q92.RespostaCerta = 1;
+        q92.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q92);
 
-        // 93
         var q93 = new Questao();
         q93.Pergunta = "Qual é a maior floresta tropical do mundo?";
         q93.Resposta1 = "Floresta Amazônica";
@@ -1071,10 +1124,11 @@ public class Gerenciador{
         q93.Resposta3 = "Floresta Boreal";
         q93.Resposta4 = "Floresta Negra";
         q93.Resposta5 = "Floresta de Taiga";
+
         q93.RespostaCerta = 1;
+        q93.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q93);
 
-        // 94
         var q94 = new Questao();
         q94.Pergunta = "Qual é a capital da Áustria?";
         q94.Resposta1 = "Viena";
@@ -1082,10 +1136,11 @@ public class Gerenciador{
         q94.Resposta3 = "Praga";
         q94.Resposta4 = "Bratislava";
         q94.Resposta5 = "Zurique";
+
         q94.RespostaCerta = 1;
+        q94.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q94);
 
-        // 95
         var q95 = new Questao();
         q95.Pergunta = "Qual é a famosa série de livros de J.K. Rowling?";
         q95.Resposta1 = "O Senhor dos Anéis";
@@ -1093,10 +1148,11 @@ public class Gerenciador{
         q95.Resposta3 = "Harry Potter";
         q95.Resposta4 = "O Hobbit";
         q95.Resposta5 = "Percy Jackson";
+
         q95.RespostaCerta = 3;
+        q95.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q95);
 
-        // 96
         var q96 = new Questao();
         q96.Pergunta = "Qual é a capital da Finlândia?";
         q96.Resposta1 = "Helsinque";
@@ -1104,10 +1160,11 @@ public class Gerenciador{
         q96.Resposta3 = "Estocolmo";
         q96.Resposta4 = "Copenhague";
         q96.Resposta5 = "Reykjavique";
+
         q96.RespostaCerta = 1;
+        q96.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q96);
 
-        // 97
         var q97 = new Questao();
         q97.Pergunta = "Qual é a capital da Islândia?";
         q97.Resposta1 = "Reykjavique";
@@ -1115,10 +1172,11 @@ public class Gerenciador{
         q97.Resposta3 = "Helsinque";
         q97.Resposta4 = "Copenhague";
         q97.Resposta5 = "Estocolmo";
+
         q97.RespostaCerta = 1;
+        q97.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q97);
 
-        // 98
         var q98 = new Questao();
         q98.Pergunta = "Qual é a moeda da Índia?";
         q98.Resposta1 = "Rúpia";
@@ -1126,10 +1184,11 @@ public class Gerenciador{
         q98.Resposta3 = "Euro";
         q98.Resposta4 = "Yen";
         q98.Resposta5 = "Libra";
+
         q98.RespostaCerta = 1;
+        q98.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q98);
 
-        // 99
         var q99 = new Questao();
         q99.Pergunta = "Qual é o nome da famosa cerveja belga?";
         q99.Resposta1 = "Heineken";
@@ -1137,10 +1196,11 @@ public class Gerenciador{
         q99.Resposta3 = "Budweiser";
         q99.Resposta4 = "Corona";
         q99.Resposta5 = "Guinness";
+
         q99.RespostaCerta = 2;
+        q99.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q99);
 
-        // 100
         var q100 = new Questao();
         q100.Pergunta = "Qual é a capital da Escócia?";
         q100.Resposta1 = "Edimburgo";
@@ -1148,7 +1208,9 @@ public class Gerenciador{
         q100.Resposta3 = "Aberdeen";
         q100.Resposta4 = "Inverness";
         q100.Resposta5 = "Dundee";
+
         q100.RespostaCerta = 1;
+        q100.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         listaQuestoes.Add(q100);
     }
 

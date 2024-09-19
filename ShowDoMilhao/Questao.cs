@@ -1,4 +1,4 @@
-namespace Show_Do_Milhao;
+namespace ShowDoMilhao;
 
 public class Questao{
 
