@@ -7,9 +7,9 @@
     Shell.FlyoutBehavior="Disabled"
     Title="ShowDoMilhao">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellContent 
+                  Title="Home"
+                  ContentTemplate="{DataTemplate local:GamePage}"
+                  Route="MainPage" />
 
 </Shell>

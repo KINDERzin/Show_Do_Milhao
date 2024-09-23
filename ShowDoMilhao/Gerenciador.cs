@@ -7,12 +7,24 @@ public class Gerenciador{
     List<Questao> listaQuestoes = new List<Questao>();
     List<int> listaQuestaoRespondida = new List<int>();
     Questao questaoAtual;
+
+    public int Pontuacao{ get; private set; }
+    int NivelResposta = 0;
+
+    void Initialize(){
+        Pontuacao = 0;
+        NivelResposta = 0;
+        ProximaQuestao();
+    }
+
     public Gerenciador(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05){
         CriarQuestoes(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
     }
 
     void CriarQuestoes(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05){
         var q1 = new Questao();
+
+        q1.NivelResposta = 1;
 
         q1.Pergunta = "Quanto é 2 + 2";
         q1.Resposta1 = "Bolsonaro";
@@ -38,6 +50,9 @@ public class Gerenciador{
         listaQuestoes.Add(q2);
 
         var q3 = new Questao();
+
+        q3.NivelResposta = 1;
+
         q3.Pergunta = "Qual é a cor do céu em um dia limpo?";
         q3.Resposta1 = "Verde";
         q3.Resposta2 = "Azul";
@@ -146,6 +161,9 @@ public class Gerenciador{
         listaQuestoes.Add(q11);
 
         var q12 = new Questao();
+
+        q12.NivelResposta = 1;
+
         q12.Pergunta = "Qual animal é conhecido como o 'rei da selva'?";
         q12.Resposta1 = "Elefante";
         q12.Resposta2 = "Tigre";
@@ -206,6 +224,9 @@ public class Gerenciador{
         listaQuestoes.Add(q16);
 
         var q17 = new Questao();
+
+        q17.NivelResposta = 2;
+
         q17.Pergunta = "Qual é o maior mamífero do mundo?";
         q17.Resposta1 = "Elefante";
         q17.Resposta2 = "Baleia Azul";
@@ -266,6 +287,9 @@ public class Gerenciador{
         listaQuestoes.Add(q21);
 
         var q22 = new Questao();
+
+        q22.NivelResposta = 1;
+
         q22.Pergunta = "Qual é a língua oficial do Brasil?";
         q22.Resposta1 = "Espanhol";
         q22.Resposta2 = "Inglês";
@@ -386,6 +410,9 @@ public class Gerenciador{
         listaQuestoes.Add(q31);
 
         var q32 = new Questao();
+
+        q32.NivelResposta = 1;
+
         q32.Pergunta = "Qual animal é conhecido por sua habilidade de imitar sons?";
         q32.Resposta1 = "Papagaio";
         q32.Resposta2 = "Cão";
@@ -494,6 +521,9 @@ public class Gerenciador{
         listaQuestoes.Add(q40);
 
         var q41 = new Questao();
+
+        q41.NivelResposta = 1;
+
         q41.Pergunta = "Qual é o maior mamífero terrestre?";
         q41.Resposta1 = "Rinoceronte";
         q41.Resposta2 = "Elefante Africano";
@@ -746,6 +776,9 @@ public class Gerenciador{
         listaQuestoes.Add(q61);
 
         var q62 = new Questao();
+
+        q62.NivelResposta = 1;
+
         q62.Pergunta = "Qual é a capital do Brasil?";
         q62.Resposta1 = "Rio de Janeiro";
         q62.Resposta2 = "São Paulo";
@@ -890,6 +923,9 @@ public class Gerenciador{
         listaQuestoes.Add(q73);
 
         var q74 = new Questao();
+
+        q74.NivelResposta = 1;
+
         q74.Pergunta = "Quem é o famoso personagem da Disney que é um pato?";
         q74.Resposta1 = "Pato Donald";
         q74.Resposta2 = "Mickey Mouse";
@@ -962,6 +998,9 @@ public class Gerenciador{
         listaQuestoes.Add(q79);
 
         var q80 = new Questao();
+
+        q80.NivelResposta = 1;
+
         q80.Pergunta = "Qual é o principal ingrediente do guacamole?";
         q80.Resposta1 = "Tomate";
         q80.Resposta2 = "Cebola";
@@ -1058,6 +1097,9 @@ public class Gerenciador{
         listaQuestoes.Add(q87);
 
         var q88 = new Questao();
+
+        q88.NivelResposta = 1;
+
         q88.Pergunta = "Qual é o nome do famoso super-herói da DC que é um Homem Morcego?";
         q88.Resposta1 = "Superman";
         q88.Resposta2 = "Batman";
@@ -1229,7 +1271,37 @@ public class Gerenciador{
     public async void VerificaCorreta(int rr){
         if(questaoAtual.VerificaResposta(rr)){
             await Task.Delay(1000);
+            AdicionaPontuacao(NivelResposta);
+            NivelResposta++;
             ProximaQuestao();
+        }
+        else{
+            await App.Current.MainPage.DisplayAlert("Game Over", "Você perdeu", "Ok");
+            Initialize();
+        }
+    }
+
+    void AdicionaPontuacao(int n){
+        if(n == 1){
+            Pontuacao = 1000;
+        }if(n == 2){
+            Pontuacao = 2000;
+        }if(n == 3){
+            Pontuacao = 5000;
+        }if(n == 4){
+            Pontuacao = 10000;
+        }if(n == 5){
+            Pontuacao = 20000;
+        }if(n == 6){
+            Pontuacao = 50000;
+        }if(n == 7){
+            Pontuacao = 100000;
+        }if(n == 8){
+            Pontuacao = 200000;
+        }if(n == 9){
+            Pontuacao = 500000;
+        }if(n == 10){
+            Pontuacao = 1000000;
         }
     }
 }
