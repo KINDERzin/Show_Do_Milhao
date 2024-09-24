@@ -9,6 +9,9 @@ public class Gerenciador{
     Questao questaoAtual;
 
     public int Pontuacao{ get; private set; }
+
+    Label labelPontuacao;
+    Label labelNivel;
     int NivelResposta = 0;
 
     void Initialize(){
@@ -17,10 +20,13 @@ public class Gerenciador{
         ProximaQuestao();
     }
 
-    public Gerenciador(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05){
+    public Gerenciador(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05, Label labelNivel, Label labelPontuacao){
         CriarQuestoes(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        this.labelNivel = labelNivel;
+        this.labelPontuacao = labelPontuacao;
     }
 
+    //Arrumar questões
     void CriarQuestoes(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05){
         var q1 = new Questao();
 
@@ -1274,6 +1280,8 @@ public class Gerenciador{
             AdicionaPontuacao(NivelResposta);
             NivelResposta++;
             ProximaQuestao();
+            labelPontuacao.Text = "Nível: " + NivelResposta.ToString();
+            labelNivel.Text = "Pontuação: " + Pontuacao.ToString();
         }
         else{
             await App.Current.MainPage.DisplayAlert("Game Over", "Você perdeu", "Ok");

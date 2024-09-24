@@ -17,31 +17,79 @@
                                 <RowDefinition Height="AUTO"/>
                                 <RowDefinition Height="AUTO"/>
                                 <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="AUTO"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="AUTO"/>
                                 <ColumnDefinition Width="AUTO"/>
                                 <ColumnDefinition Width="AUTO"/>
                         </Grid.ColumnDefinitions>
-                
+                        <!--
+                        <Frame IsVisible="True"
+                               x:Name="frameGameOver"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               Grid.RowSpan="10"
+                               Grid.ColumnSpan="3"
+                               Margin="20"
+                               BackgroundColor="Black">
+                                <Grid>
+                                
+                                        <Grid.RowDefinitions>
+                                                <RowDefinition Height="AUTO"/>
+                                                <RowDefinition Height="AUTO"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Label Text="Você perdeu"
+                                               TextColor="White"
+                                               FontFamily="StalystaPersonal"
+                                               Grid.Row="0"/>
+                                        
+                                        <Button Text="Recomeçar"
+                                                TextColor="White"
+                                                BorderColor="White"
+                                                BorderWidth="1"
+                                                Grid.Row="1"/>
+                                </Grid>
+                        </Frame>
+                        -->           
                         <Image Source="show_do_milhao.png"
                                Aspect="AspectFill"
                                Grid.Row="0"
                                Grid.Column="0"
                                Grid.ColumnSpan="3"/>
 
+                        <Label Text="Pontuação:"
+                               TextColor="White" 
+                               FontSize="16"
+                               FontFamily="StalystaPersonal"
+                               Margin="10, 2, 10, 15"
+                               x:Name="labelPontuacao"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="2"/>
+
+                        <Label Text="Nível:"
+                               TextColor="White" 
+                               FontSize="16"
+                               FontFamily="StalystaPersonal"
+                               Margin="10,2, 10, 15"
+                               x:Name="labelNivel" 
+                               Grid.Row="1"
+                               Grid.Column="2"/>
+
                         <Label Text="Pergunta:" 
                                TextColor="White" 
                                FontSize="18"
                                FontFamily="StalystaPersonal"
                                Margin="10,5"
-                               Grid.Row="1"
+                               Grid.Row="2"
                                Grid.Column="0"
                                Grid.ColumnSpan="3"/>
                         
                         <Frame BackgroundColor="Black"
                                Margin="10,5"
-                               Grid.Row="2"
+                               Grid.Row="3"
                                Grid.Column="0"
                                Grid.ColumnSpan="3">
                                 <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris nec dui sapien. Aenean in purus justo." 
@@ -62,7 +110,7 @@
                                 Margin="10,5"
                                 TextColor="White"
                                 FontSize="12"
-                                Grid.Row="3"
+                                Grid.Row="4"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
 
@@ -75,7 +123,7 @@
                                 Margin="10,5"
                                 TextColor="White"
                                 FontSize="12"
-                                Grid.Row="4"
+                                Grid.Row="5"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
                                 
@@ -88,7 +136,7 @@
                                 Margin="10,5"
                                 TextColor="White"
                                 FontSize="12"
-                                Grid.Row="5"
+                                Grid.Row="6"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
                                 
@@ -101,7 +149,7 @@
                                 Margin="10,5"
                                 TextColor="White"
                                 FontSize="12"
-                                Grid.Row="6"
+                                Grid.Row="7"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
                                 
@@ -114,7 +162,7 @@
                                 Margin="10,5"
                                 TextColor="White"
                                 FontSize="12"
-                                Grid.Row="7"
+                                Grid.Row="8"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
 
@@ -122,7 +170,7 @@
                                 ImageSource="universitario.png"
                                 TextColor="Black"
                                 Margin="10, 10, 5,10"
-                                Grid.Row="8"
+                                Grid.Row="9"
                                 Grid.Column="0"/>
                                 
                         <Button BackgroundColor="Black"
@@ -130,14 +178,14 @@
                                 MaximumWidthRequest="64"
                                 TextColor="Black"
                                 Margin="5,10"
-                                Grid.Row="8"
+                                Grid.Row="9"
                                 Grid.Column="1"/>
                                 
                         <Button BackgroundColor="Black"
                                 ImageSource="cartas.png"
                                 TextColor="Black"
                                 Margin="5, 10, 10, 10"
-                                Grid.Row="8"
+                                Grid.Row="9"
                                 Grid.Column="2"/>
                 </Grid>
         </ScrollView>
