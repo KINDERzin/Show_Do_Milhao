@@ -24,41 +24,14 @@
                                 <ColumnDefinition Width="AUTO"/>
                                 <ColumnDefinition Width="AUTO"/>
                         </Grid.ColumnDefinitions>
-                        <!--
-                        <Frame IsVisible="True"
-                               x:Name="frameGameOver"
-                               Grid.Row="1"
-                               Grid.Column="0"
-                               Grid.RowSpan="10"
-                               Grid.ColumnSpan="3"
-                               Margin="20"
-                               BackgroundColor="Black">
-                                <Grid>
-                                
-                                        <Grid.RowDefinitions>
-                                                <RowDefinition Height="AUTO"/>
-                                                <RowDefinition Height="AUTO"/>
-                                        </Grid.RowDefinitions>
 
-                                        <Label Text="Você perdeu"
-                                               TextColor="White"
-                                               FontFamily="StalystaPersonal"
-                                               Grid.Row="0"/>
-                                        
-                                        <Button Text="Recomeçar"
-                                                TextColor="White"
-                                                BorderColor="White"
-                                                BorderWidth="1"
-                                                Grid.Row="1"/>
-                                </Grid>
-                        </Frame>
-                        -->           
+                                 
                         <Image Source="show_do_milhao.png"
                                Aspect="AspectFill"
                                Grid.Row="0"
                                Grid.Column="0"
                                Grid.ColumnSpan="3"/>
-
+                                          
                         <Label Text="Pontuação:"
                                TextColor="White" 
                                FontSize="16"
@@ -92,8 +65,7 @@
                                Grid.Row="3"
                                Grid.Column="0"
                                Grid.ColumnSpan="3">
-                                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris nec dui sapien. Aenean in purus justo." 
-                                       x:Name="labelPergunta"
+                                <Label x:Name="labelPergunta"
                                        HorizontalTextAlignment="Center"
                                        TextColor="White" 
                                        FontSize="16"
@@ -101,8 +73,7 @@
                                        FontFamily="StalystaPersonal"/>
                         </Frame>
 
-                        <Button Text="Praesent sit amet sollicitudin elit"
-                                x:Name="Resposta01"
+                        <Button x:Name="Resposta01"
                                 Clicked="clicouBotaoResposta01"
                                 BackgroundColor="Black"
                                 BorderColor="White"
@@ -114,8 +85,7 @@
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
 
-                        <Button Text="Donec in ante vel dui vehicula hendrerit"
-                                x:Name="Resposta02"
+                        <Button x:Name="Resposta02"
                                 Clicked="clicouBotaoResposta02"
                                 BackgroundColor="Black"
                                 BorderColor="White"
@@ -127,8 +97,7 @@
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
                                 
-                        <Button Text="Nulla tincidunt est eget sollicitudin dapibus"
-                                x:Name="Resposta03"
+                        <Button x:Name="Resposta03"
                                 Clicked="clicouBotaoResposta03"
                                 BackgroundColor="Black"
                                 BorderColor="White"
@@ -140,8 +109,7 @@
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
                                 
-                        <Button Text="Etiam imperdiet ex non lorem commodo, in porta nulla elementum"
-                                x:Name="Resposta04"
+                        <Button x:Name="Resposta04"
                                 Clicked="clicouBotaoResposta04"
                                 BackgroundColor="Black"
                                 BorderColor="White"
@@ -153,8 +121,7 @@
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
                                 
-                        <Button Text="Nunc posuere urna vitae felis feugiat, in lobortis nisi accumsan"
-                                x:Name="Resposta05"
+                        <Button x:Name="Resposta05"
                                 Clicked="clicouBotaoResposta05"
                                 BackgroundColor="Black"
                                 BorderColor="White"
@@ -187,6 +154,37 @@
                                 Margin="5, 10, 10, 10"
                                 Grid.Row="9"
                                 Grid.Column="2"/>
+
+                        <Frame IsVisible="true"
+                               x:Name="frameGameOver"
+                               Grid.RowSpan="10"
+                               Grid.ColumnSpan="3"
+                               Margin="20"
+                               BackgroundColor="Black">
+                                <Grid>
+                                        <Grid.RowDefinitions>
+                                                <RowDefinition Height="AUTO"/>
+                                                <RowDefinition Height="AUTO"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Label Text="Você perdeu"
+                                               TextColor="White"
+                                               FontFamily="StalystaPersonal"
+                                               FontSize="30"
+                                               HorizontalTextAlignment="Center"
+                                               Margin="20"
+                                               FontSize="50"
+                                               Grid.Row="0"/>
+                                        
+                                        <Button Text="Recomeçar"
+                                                TextColor="White"
+                                                BackgroundColor="Black"
+                                                FontFamily="morganisa"
+                                                BorderColor="White"
+                                                BorderWidth="1"
+                                                Grid.Row="1"/>
+                                </Grid>
+                        </Frame>
                 </Grid>
         </ScrollView>
 </ContentPage>

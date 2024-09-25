@@ -1263,10 +1263,10 @@ public class Gerenciador{
     }
 
     public void ProximaQuestao(){
-        var numRandom = Random.Shared.Next(0, listaQuestoes.Count- 1);
+        var numRandom = Random.Shared.Next(0, listaQuestoes.Count);
 
         while(listaQuestaoRespondida.Contains(numRandom)){
-            numRandom = Random.Shared.Next(0,listaQuestoes.Count - 1);
+            numRandom = Random.Shared.Next(0,listaQuestoes.Count);
         } 
 
         listaQuestaoRespondida.Add(numRandom);
