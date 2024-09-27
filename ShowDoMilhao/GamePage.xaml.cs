@@ -5,7 +5,7 @@ public partial class GamePage{
 	public GamePage(){
         InitializeComponent();
 
-        gerenciador = new Gerenciador(labelPergunta, Resposta01, Resposta02, Resposta03, Resposta04, Resposta05, labelNivel, labelPergunta);
+        gerenciador = new Gerenciador(labelPergunta, Resposta01, Resposta02, Resposta03, Resposta04, Resposta05, labelNivel, labelPontuacao);
         gerenciador.ProximaQuestao();
     }
 

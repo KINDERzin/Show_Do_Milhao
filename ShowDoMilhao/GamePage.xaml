@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShowDoMilhao.GamePage"
-             Shell.NavBarIsVisible="False"
-             BackgroundColor="Black">
+             Shell.NavBarIsVisible="False">
 
         <ScrollView>
                 <Grid>
@@ -170,7 +169,6 @@
                                         <Label Text="Você perdeu"
                                                TextColor="White"
                                                FontFamily="StalystaPersonal"
-                                               FontSize="30"
                                                HorizontalTextAlignment="Center"
                                                Margin="20"
                                                FontSize="50"

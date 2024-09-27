@@ -1,6 +1,6 @@
 namespace ShowDoMilhao;
 
-public class Questao{
+public class Questao : IEquatable<Questao>{
 
     public string Pergunta;
     public string Resposta1;
@@ -19,6 +19,10 @@ public class Questao{
     private Button ButtonResposta3;
     private Button ButtonResposta4;
     private Button ButtonResposta5;
+
+    public bool Equals(Questao q){
+        return this.NivelResposta == q.NivelResposta;
+    }
 
     public Questao(){
         

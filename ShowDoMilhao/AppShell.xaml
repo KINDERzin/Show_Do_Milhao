@@ -9,7 +9,7 @@
 
     <ShellContent 
                   Title="Home"
-                  ContentTemplate="{DataTemplate local:GamePage}"
+                  ContentTemplate="{DataTemplate local:MainPage}"
                   Route="MainPage" />
 
 </Shell>
