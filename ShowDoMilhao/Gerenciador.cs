@@ -5,18 +5,18 @@ namespace ShowDoMilhao;
 public class Gerenciador{
 
     List<Questao> listaTodasQuestoes = new List<Questao>();
-    List<Questao> listaTodasQuestaoRespondida = new List<Questao>();
+    List<Questao> listaTodasQuestaoRespondidas = new List<Questao>();
     Questao questaoAtual;
 
     public int Pontuacao{ get; private set; }
 
     Label labelPontuacao;
     Label labelNivel;
-    int NivelResposta = 0;
+    int NivelResposta = 1;
 
     void Initialize(){
         Pontuacao = 0;
-        NivelResposta = 0;
+        NivelResposta = 1;
         ProximaQuestao();
     }
 
@@ -1265,15 +1265,15 @@ public class Gerenciador{
 
     public void ProximaQuestao(){
 
-        var listaQuestoes = listaTodasQuestoes.Where( d => d.NivelResposta == questaoAtual).ToList();
+        var listaQuestoes = listaTodasQuestoes.Where(d => d.NivelResposta == NivelResposta).ToList();
         var numRandom = Random.Shared.Next(0, listaQuestoes.Count - 1);
         var NovaQuestao = listaQuestoes[numRandom];
 
-        while(listaTodasQuestaoRespondida.Contains(NovaQuestao)){
-            numRandom = Random.Shared.Next(0,listaTodasQuestoes.Count);
-            NovaQuestao = listaTodasQuestoes[numRandom];
+        while(listaTodasQuestaoRespondidas.Contains(NovaQuestao)){
+            numRandom = Random.Shared.Next(0,listaQuestoes.Count - 1);
+            NovaQuestao = listaQuestoes[numRandom];
         } 
-        listaTodasQuestaoRespondida.Add(NovaQuestao);
+        listaTodasQuestaoRespondidas.Add(NovaQuestao);
         questaoAtual = NovaQuestao;
         questaoAtual.Desenhar();
     }
