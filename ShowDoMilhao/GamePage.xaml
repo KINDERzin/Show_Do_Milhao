@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ShowDoMilhao.GamePage"
+             BackgroundColor="Black"
              Shell.NavBarIsVisible="False">
 
         <ScrollView>
@@ -24,15 +25,15 @@
                                 <ColumnDefinition Width="AUTO"/>
                         </Grid.ColumnDefinitions>
 
-                                 
+
                         <Image Source="show_do_milhao.png"
                                Aspect="AspectFill"
                                Grid.Row="0"
                                Grid.Column="0"
                                Grid.ColumnSpan="3"/>
-                                          
+
                         <Label Text="Pontuação:"
-                               TextColor="White" 
+                               TextColor="White"
                                FontSize="16"
                                FontFamily="StalystaPersonal"
                                Margin="10, 2, 10, 15"
@@ -42,23 +43,24 @@
                                Grid.ColumnSpan="2"/>
 
                         <Label Text="Nível:"
-                               TextColor="White" 
+                               TextColor="White"
                                FontSize="16"
                                FontFamily="StalystaPersonal"
                                Margin="10,2, 10, 15"
-                               x:Name="labelNivel" 
+                               x:Name="labelNivel"
                                Grid.Row="1"
                                Grid.Column="2"/>
 
-                        <Label Text="Pergunta:" 
-                               TextColor="White" 
+                        <Label Text="Pergunta:"
+                               TextColor="White"
                                FontSize="18"
                                FontFamily="StalystaPersonal"
                                Margin="10,5"
                                Grid.Row="2"
                                Grid.Column="0"
                                Grid.ColumnSpan="3"/>
-                        
+
+                        <!-- Frame pergunta -->
                         <Frame BackgroundColor="Black"
                                Margin="10,5"
                                Grid.Row="3"
@@ -66,7 +68,7 @@
                                Grid.ColumnSpan="3">
                                 <Label x:Name="labelPergunta"
                                        HorizontalTextAlignment="Center"
-                                       TextColor="White" 
+                                       TextColor="White"
                                        FontSize="16"
                                        MaximumWidthRequest="500"
                                        FontFamily="StalystaPersonal"/>
@@ -95,7 +97,7 @@
                                 Grid.Row="5"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
-                                
+
                         <Button x:Name="Resposta03"
                                 Clicked="clicouBotaoResposta03"
                                 BackgroundColor="Black"
@@ -107,7 +109,7 @@
                                 Grid.Row="6"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
-                                
+
                         <Button x:Name="Resposta04"
                                 Clicked="clicouBotaoResposta04"
                                 BackgroundColor="Black"
@@ -119,7 +121,7 @@
                                 Grid.Row="7"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
-                                
+
                         <Button x:Name="Resposta05"
                                 Clicked="clicouBotaoResposta05"
                                 BackgroundColor="Black"
@@ -138,23 +140,25 @@
                                 Margin="10, 10, 5,10"
                                 Grid.Row="9"
                                 Grid.Column="0"/>
-                                
+
                         <Button BackgroundColor="Black"
                                 ImageSource="right_arrow.png"
+                                Clicked="OnAjudaPulaClicked"
                                 MaximumWidthRequest="64"
                                 TextColor="Black"
                                 Margin="5,10"
                                 Grid.Row="9"
                                 Grid.Column="1"/>
-                                
+
                         <Button BackgroundColor="Black"
                                 ImageSource="cartas.png"
+                                Clicked="OnAjudaRetirarCliecked"
                                 TextColor="Black"
                                 Margin="5, 10, 10, 10"
                                 Grid.Row="9"
                                 Grid.Column="2"/>
 
-                        <Frame IsVisible="true"
+                        <Frame IsVisible="false"
                                x:Name="frameGameOver"
                                Grid.RowSpan="10"
                                Grid.ColumnSpan="3"
@@ -173,7 +177,7 @@
                                                Margin="20"
                                                FontSize="50"
                                                Grid.Row="0"/>
-                                        
+
                                         <Button Text="Recomeçar"
                                                 TextColor="White"
                                                 BackgroundColor="Black"

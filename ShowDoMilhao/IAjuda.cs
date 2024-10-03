@@ -1,6 +1,7 @@
 using ShowDoMilhao;
 
-public abstract class IAjuda{
+public abstract class IAjuda
+{
     protected Button BtnResp01;
     protected Button BtnResp02;
     protected Button BtnResp03;
@@ -8,7 +9,8 @@ public abstract class IAjuda{
     protected Button BtnResp05;
     protected Frame FrameAjuda;
 
-    public void ConfiguraEstruturaDesenho(Button BtnResp01, Button BtnResp02, Button BtnResp03, Button BtnResp04, Button BtnResp05){
+    public void ConfiguraEstruturaDesenho(Button BtnResp01, Button BtnResp02, Button BtnResp03, Button BtnResp04, Button BtnResp05)
+    {
         this.BtnResp01 = BtnResp01;
         this.BtnResp02 = BtnResp02;
         this.BtnResp03 = BtnResp03;
@@ -16,7 +18,8 @@ public abstract class IAjuda{
         this.BtnResp05 = BtnResp05;
     }
 
-    public void ConfiguraEstruturaDesenho(Frame AjudaFrame){
+    public void ConfiguraEstruturaDesenho(Frame AjudaFrame)
+    {
         this.FrameAjuda = FrameAjuda;
     }
 

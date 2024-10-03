@@ -1,6 +1,7 @@
 namespace ShowDoMilhao;
 
-public class Questao : IEquatable<Questao>{
+public class Questao : IEquatable<Questao>
+{
 
     public string Pergunta;
     public string Resposta1;
@@ -20,15 +21,18 @@ public class Questao : IEquatable<Questao>{
     private Button ButtonResposta4;
     private Button ButtonResposta5;
 
-    public bool Equals(Questao q){
-        return this.NivelResposta == q.NivelResposta;
+    public bool Equals(Questao q)
+    {
+        return this.NivelResposta == q.NivelResposta && this.Pergunta == q.Pergunta;
     }
 
-    public Questao(){
-        
+    public Questao()
+    {
+
     }
 
-    public Questao(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5){
+    public Questao(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5)
+    {
         LabelPergunta = labelpergunta;
         ButtonResposta1 = button1;
         ButtonResposta2 = button2;
@@ -37,7 +41,8 @@ public class Questao : IEquatable<Questao>{
         ButtonResposta5 = button5;
     }
 
-    public void ConfiguraEstruturaDesenho (Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5){
+    public void ConfiguraEstruturaDesenho(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5)
+    {
         LabelPergunta = labelpergunta;
         ButtonResposta1 = button1;
         ButtonResposta2 = button2;
@@ -46,43 +51,60 @@ public class Questao : IEquatable<Questao>{
         ButtonResposta5 = button5;
     }
 
-    public void Desenhar(){
+    public void Desenhar()
+    {
         LabelPergunta.Text = Pergunta;
         ButtonResposta1.Text = Resposta1;
         ButtonResposta2.Text = Resposta2;
         ButtonResposta3.Text = Resposta3;
         ButtonResposta4.Text = Resposta4;
         ButtonResposta5.Text = Resposta5;
+
+        ButtonResposta1.IsVisible = true;
+        ButtonResposta2.IsVisible = true;
+        ButtonResposta3.IsVisible = true;
+        ButtonResposta4.IsVisible = true;
+        ButtonResposta5.IsVisible = true;
     }
 
-    private Button QualButton(int r){
-        if(r == 1){
+    private Button QualButton(int r)
+    {
+        if (r == 1)
+        {
             return ButtonResposta1;
         }
-        else if(r == 2){
+        else if (r == 2)
+        {
             return ButtonResposta2;
         }
-        else if (r == 3){
+        else if (r == 3)
+        {
             return ButtonResposta3;
         }
-        else if (r == 4){
+        else if (r == 4)
+        {
             return ButtonResposta4;
         }
-        else if (r == 5 ){
+        else if (r == 5)
+        {
             return ButtonResposta5;
         }
-        else{
+        else
+        {
             return null;
         }
     }
 
-    public bool VerificaResposta(int rr){
-        if(RespostaCerta == rr){
+    public bool VerificaResposta(int rr)
+    {
+        if (RespostaCerta == rr)
+        {
             var button = QualButton(rr);
             button.BackgroundColor = Colors.Green; //"#a1c9ae";
             return true;
         }
-        else{
+        else
+        {
             var buttonCorreto = QualButton(RespostaCerta);
             var buttonIncorreto = QualButton(rr);
             buttonCorreto.BackgroundColor = Colors.Green; //"#a1c9ae";

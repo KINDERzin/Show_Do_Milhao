@@ -2,33 +2,42 @@ using ShowDoMilhao;
 
 namespace ShowDoMilhao;
 
-public class Gerenciador{
+public class Gerenciador
+{
 
     List<Questao> listaTodasQuestoes = new List<Questao>();
     List<Questao> listaTodasQuestaoRespondidas = new List<Questao>();
     Questao questaoAtual;
 
-    public int Pontuacao{ get; private set; }
+    public int Pontuacao { get; private set; }
 
     Label labelPontuacao;
     Label labelNivel;
     int NivelResposta = 1;
 
-    void Initialize(){
+    void Initialize()
+    {
         Pontuacao = 0;
         NivelResposta = 1;
         ProximaQuestao();
     }
 
-    public Gerenciador(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05, Label labelNivel, Label labelPontuacao){
+    public Questao GetQuestaoAtual()
+    {
+        return questaoAtual;
+    }
+
+    public Gerenciador(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05, Label labelNivel, Label labelPontuacao)
+    {
         CriarQuestoes(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
         this.labelNivel = labelNivel;
         this.labelPontuacao = labelPontuacao;
     }
 
     //Arrumar questões
-    void CriarQuestoes(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05){
-       
+    void CriarQuestoes(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05)
+    {
+
         var q1 = new Questao();
 
         q1.NivelResposta = 1;
@@ -1263,23 +1272,27 @@ public class Gerenciador{
         listaTodasQuestoes.Add(q100);
     }
 
-    public void ProximaQuestao(){
+    public void ProximaQuestao()
+    {
 
         var listaQuestoes = listaTodasQuestoes.Where(d => d.NivelResposta == NivelResposta).ToList();
         var numRandom = Random.Shared.Next(0, listaQuestoes.Count - 1);
         var NovaQuestao = listaQuestoes[numRandom];
 
-        while(listaTodasQuestaoRespondidas.Contains(NovaQuestao)){
-            numRandom = Random.Shared.Next(0,listaQuestoes.Count - 1);
+        while (listaTodasQuestaoRespondidas.Contains(NovaQuestao))
+        {
+            numRandom = Random.Shared.Next(0, listaQuestoes.Count - 1);
             NovaQuestao = listaQuestoes[numRandom];
-        } 
+        }
         listaTodasQuestaoRespondidas.Add(NovaQuestao);
         questaoAtual = NovaQuestao;
         questaoAtual.Desenhar();
     }
 
-    public async void VerificaCorreta(int rr){
-        if(questaoAtual.VerificaResposta(rr)){
+    public async void VerificaCorreta(int rr)
+    {
+        if (questaoAtual.VerificaResposta(rr))
+        {
             await Task.Delay(1000);
             AdicionaPontuacao(NivelResposta);
             NivelResposta++;
@@ -1287,32 +1300,53 @@ public class Gerenciador{
             labelPontuacao.Text = "Nível: " + NivelResposta.ToString();
             labelNivel.Text = "Pontuação: " + Pontuacao.ToString();
         }
-        else{
+        else
+        {
             await App.Current.MainPage.DisplayAlert("Game Over", "Você perdeu", "Ok");
             Initialize();
         }
     }
 
-    void AdicionaPontuacao(int n){
-        if(n == 1){
+    void AdicionaPontuacao(int n)
+    {
+        if (n == 1)
+        {
             Pontuacao = 1000;
-        }if(n == 2){
+        }
+        if (n == 2)
+        {
             Pontuacao = 2000;
-        }if(n == 3){
+        }
+        if (n == 3)
+        {
             Pontuacao = 5000;
-        }if(n == 4){
+        }
+        if (n == 4)
+        {
             Pontuacao = 10000;
-        }if(n == 5){
+        }
+        if (n == 5)
+        {
             Pontuacao = 20000;
-        }if(n == 6){
+        }
+        if (n == 6)
+        {
             Pontuacao = 50000;
-        }if(n == 7){
+        }
+        if (n == 7)
+        {
             Pontuacao = 100000;
-        }if(n == 8){
+        }
+        if (n == 8)
+        {
             Pontuacao = 200000;
-        }if(n == 9){
+        }
+        if (n == 9)
+        {
             Pontuacao = 500000;
-        }if(n == 10){
+        }
+        if (n == 10)
+        {
             Pontuacao = 1000000;
         }
     }

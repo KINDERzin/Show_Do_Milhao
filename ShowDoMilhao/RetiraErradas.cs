@@ -1,8 +1,11 @@
 using ShowDoMilhao;
 
-public class RetiraErradas : IAjuda{
-    public override void RealizaAjuda(Questao questao){
-        switch(questao.RespostaCerta){
+public class RetiraErradas : IAjuda
+{
+    public override void RealizaAjuda(Questao questao)
+    {
+        switch (questao.RespostaCerta)
+        {
             case 1:
                 BtnResp02.IsVisible = false;
                 BtnResp03.IsVisible = false;
@@ -10,7 +13,7 @@ public class RetiraErradas : IAjuda{
 
                 break;
 
-            case 2:  
+            case 2:
                 BtnResp01.IsVisible = false;
                 BtnResp03.IsVisible = false;
                 BtnResp05.IsVisible = false;
