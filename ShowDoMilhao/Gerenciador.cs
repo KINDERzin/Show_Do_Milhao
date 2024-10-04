@@ -1276,7 +1276,7 @@ public class Gerenciador
     {
 
         var listaQuestoes = listaTodasQuestoes.Where(d => d.NivelResposta == NivelResposta).ToList();
-        var numRandom = Random.Shared.Next(0, listaQuestoes.Count - 1);
+        var numRandom = Random.Shared.Next(0, listaQuestoes.Count);
         var NovaQuestao = listaQuestoes[numRandom];
 
         while (listaTodasQuestaoRespondidas.Contains(NovaQuestao))
@@ -1284,6 +1284,7 @@ public class Gerenciador
             numRandom = Random.Shared.Next(0, listaQuestoes.Count - 1);
             NovaQuestao = listaQuestoes[numRandom];
         }
+
         listaTodasQuestaoRespondidas.Add(NovaQuestao);
         questaoAtual = NovaQuestao;
         questaoAtual.Desenhar();

@@ -23,8 +23,5 @@
                 WidthRequest="300"
                 HeightRequest="50"
                 Margin="20,10"/>
-
-
-
     </Grid>
 </ContentPage>

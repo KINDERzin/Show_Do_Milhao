@@ -32,7 +32,7 @@
                                Grid.Column="0"
                                Grid.ColumnSpan="3"/>
 
-                        <Label Text="Pontuação:"
+                        <Label Text="Nível: 1"
                                TextColor="White"
                                FontSize="16"
                                FontFamily="StalystaPersonal"
@@ -42,7 +42,7 @@
                                Grid.Column="0"
                                Grid.ColumnSpan="2"/>
 
-                        <Label Text="Nível:"
+                        <Label Text="Pontuação: 0"
                                TextColor="White"
                                FontSize="16"
                                FontFamily="StalystaPersonal"
