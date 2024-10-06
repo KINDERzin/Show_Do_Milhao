@@ -15,6 +15,7 @@
                Aspect="Fill"/>
 
         <Button Text="Começar"
+                TextColor="White"
                 Grid.Row="1"
                 BackgroundColor="Transparent"
                 BorderColor="White"

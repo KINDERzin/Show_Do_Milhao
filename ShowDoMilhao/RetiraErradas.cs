@@ -23,13 +23,13 @@ public class RetiraErradas : IAjuda
             case 3:
                 BtnResp01.IsVisible = false;
                 BtnResp02.IsVisible = false;
-                BtnResp03.IsVisible = false;
+                BtnResp04.IsVisible = false;
 
                 break;
 
             case 4:
                 BtnResp03.IsVisible = false;
-                BtnResp04.IsVisible = false;
+                BtnResp02.IsVisible = false;
                 BtnResp05.IsVisible = false;
 
                 break;
@@ -37,7 +37,7 @@ public class RetiraErradas : IAjuda
             case 5:
                 BtnResp02.IsVisible = false;
                 BtnResp03.IsVisible = false;
-                BtnResp05.IsVisible = false;
+                BtnResp04.IsVisible = false;
 
                 break;
         }

@@ -8,21 +8,21 @@
         <ScrollView>
                 <Grid>
                         <Grid.RowDefinitions>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
-                                <RowDefinition Height="AUTO"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="AUTO"/>
-                                <ColumnDefinition Width="AUTO"/>
-                                <ColumnDefinition Width="AUTO"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
 
@@ -60,7 +60,7 @@
                                Grid.Column="0"
                                Grid.ColumnSpan="3"/>
 
-                        <!-- Frame pergunta -->
+                        <!-- Frame onde fica a pergunta -->
                         <Frame BackgroundColor="Black"
                                Margin="10,5"
                                Grid.Row="3"
@@ -73,7 +73,7 @@
                                        MaximumWidthRequest="500"
                                        FontFamily="StalystaPersonal"/>
                         </Frame>
-
+                        <!-- Botão de resposta 1-->
                         <Button x:Name="Resposta01"
                                 Clicked="clicouBotaoResposta01"
                                 BackgroundColor="Black"
@@ -85,7 +85,7 @@
                                 Grid.Row="4"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
-
+                        <!-- Botão de resposta 2-->
                         <Button x:Name="Resposta02"
                                 Clicked="clicouBotaoResposta02"
                                 BackgroundColor="Black"
@@ -97,7 +97,7 @@
                                 Grid.Row="5"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
-
+                        <!-- Botão de resposta 3-->
                         <Button x:Name="Resposta03"
                                 Clicked="clicouBotaoResposta03"
                                 BackgroundColor="Black"
@@ -109,7 +109,7 @@
                                 Grid.Row="6"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
-
+                        <!-- Botão de resposta 4-->
                         <Button x:Name="Resposta04"
                                 Clicked="clicouBotaoResposta04"
                                 BackgroundColor="Black"
@@ -121,7 +121,7 @@
                                 Grid.Row="7"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
-
+                        <!-- Botão de resposta 5-->
                         <Button x:Name="Resposta05"
                                 Clicked="clicouBotaoResposta05"
                                 BackgroundColor="Black"
@@ -133,14 +133,14 @@
                                 Grid.Row="8"
                                 Grid.Column="0"
                                 Grid.ColumnSpan="3"/>
-
+                        <!-- Botão de ajuda(universitários)-->
                         <Button BackgroundColor="Black"
                                 ImageSource="universitario.png"
                                 TextColor="Black"
                                 Margin="10, 10, 5,10"
                                 Grid.Row="9"
                                 Grid.Column="0"/>
-
+                        <!-- Botão de ajuda(pular)-->
                         <Button BackgroundColor="Black"
                                 ImageSource="right_arrow.png"
                                 Clicked="OnAjudaPulaClicked"
@@ -149,7 +149,7 @@
                                 Margin="5,10"
                                 Grid.Row="9"
                                 Grid.Column="1"/>
-
+                        <!-- Botão de ajuda(cartas)-->
                         <Button BackgroundColor="Black"
                                 ImageSource="cartas.png"
                                 Clicked="OnAjudaRetirarCliecked"
@@ -157,18 +157,37 @@
                                 Margin="5, 10, 10, 10"
                                 Grid.Row="9"
                                 Grid.Column="2"/>
+                        <!--Frame de Universitários-->
+                        <Frame BackgroundColor="Black"
+                               BorderColor="White"
+                               Margin="20"
+                               x:Name="frameUniversitarios"
+                               Grid.RowSpan="10"
+                               Grid.ColumnSpan="3">
+                                <VerticalStackLayout>
+                                        <Image Source="show_do_milhao.png"
+                                               Aspect="AspectFill"/>
 
+                                        <Label Text="Universitários"
+                                               HorizontalTextAlignment="Center"
+                                               FontFamily="StalystaPersonal"
+                                               Margin="30, 10"
+                                               FontSize="24"/>
+                                </VerticalStackLayout>
+                        </Frame>
+                        <!--Frame de GameOver-->
                         <Frame IsVisible="false"
                                x:Name="frameGameOver"
                                Grid.RowSpan="10"
                                Grid.ColumnSpan="3"
                                Margin="20"
+                               Padding="0"
                                BackgroundColor="Black">
-                                <Grid>
-                                        <Grid.RowDefinitions>
-                                                <RowDefinition Height="AUTO"/>
-                                                <RowDefinition Height="AUTO"/>
-                                        </Grid.RowDefinitions>
+                                <VerticalStackLayout>
+                                        <Image Source="show_do_milhao.png"
+                                               Aspect="AspectFill"
+                                               Grid.Row="0"
+                                               Margin="0"/>
 
                                         <Label Text="Você perdeu"
                                                TextColor="White"
@@ -176,16 +195,17 @@
                                                HorizontalTextAlignment="Center"
                                                Margin="20"
                                                FontSize="50"
-                                               Grid.Row="0"/>
+                                               Grid.Row="1"/>
 
-                                        <Button Text="Recomeçar"
+                                        <Button Text="RECOMEÇAR"
+                                                Clicked="BotaoRecomecar"
                                                 TextColor="White"
                                                 BackgroundColor="Black"
-                                                FontFamily="morganisa"
+                                                FontFamily="StalystaPersonal"
                                                 BorderColor="White"
                                                 BorderWidth="1"
-                                                Grid.Row="1"/>
-                                </Grid>
+                                                Grid.Row="3"/>
+                                </VerticalStackLayout>
                         </Frame>
                 </Grid>
         </ScrollView>

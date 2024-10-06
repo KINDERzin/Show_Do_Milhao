@@ -2,24 +2,36 @@ namespace ShowDoMilhao;
 
 public class Questao : IEquatable<Questao>
 {
-
+    // Texto de Pergunta
     public string Pergunta;
+    //Texto dos botão 1
     public string Resposta1;
+    //Texto dos botão 2
     public string Resposta2;
+    //Texto dos botão 3
     public string Resposta3;
+    //Texto dos botão 4
     public string Resposta4;
+    //Texto dos botão 5
     public string Resposta5;
-
+    // Botão da resposta certa
     public int RespostaCerta;
+    //Nível da pergunta
     public int NivelResposta;
-
+    //Label da pergunta
     private Label LabelPergunta;
-
+    //Botão 1
     private Button ButtonResposta1;
+    //Botão 2
     private Button ButtonResposta2;
+    //Botão 3
     private Button ButtonResposta3;
+    //Botão 4
     private Button ButtonResposta4;
+    //Botão 5
     private Button ButtonResposta5;
+    //Frame  de GameOver
+    private Frame FrameGameOver;
 
     public bool Equals(Questao q)
     {
@@ -31,7 +43,7 @@ public class Questao : IEquatable<Questao>
 
     }
 
-    public Questao(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5)
+    public Questao(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5, Frame frameGameOver)
     {
         LabelPergunta = labelpergunta;
         ButtonResposta1 = button1;
@@ -39,9 +51,10 @@ public class Questao : IEquatable<Questao>
         ButtonResposta3 = button3;
         ButtonResposta4 = button4;
         ButtonResposta5 = button5;
+        FrameGameOver = frameGameOver;
     }
 
-    public void ConfiguraEstruturaDesenho(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5)
+    public void ConfiguraEstruturaDesenho(Label labelpergunta, Button button1, Button button2, Button button3, Button button4, Button button5, Frame frameGameOver)
     {
         LabelPergunta = labelpergunta;
         ButtonResposta1 = button1;
@@ -49,6 +62,7 @@ public class Questao : IEquatable<Questao>
         ButtonResposta3 = button3;
         ButtonResposta4 = button4;
         ButtonResposta5 = button5;
+        FrameGameOver = frameGameOver;
     }
 
     public void Desenhar()
@@ -65,6 +79,7 @@ public class Questao : IEquatable<Questao>
         ButtonResposta3.IsVisible = true;
         ButtonResposta4.IsVisible = true;
         ButtonResposta5.IsVisible = true;
+        FrameGameOver.IsVisible = false;
     }
 
     private Button QualButton(int r)
@@ -101,6 +116,7 @@ public class Questao : IEquatable<Questao>
         {
             var button = QualButton(rr);
             button.BackgroundColor = Colors.Green; //"#a1c9ae";
+
             return true;
         }
         else

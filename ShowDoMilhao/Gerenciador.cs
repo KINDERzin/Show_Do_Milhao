@@ -8,18 +8,21 @@ public class Gerenciador
     List<Questao> listaTodasQuestoes = new List<Questao>();
     List<Questao> listaTodasQuestaoRespondidas = new List<Questao>();
     Questao questaoAtual;
+    GamePage gamePage;
 
     public int Pontuacao { get; private set; }
 
     Label labelPontuacao;
     Label labelNivel;
     int NivelResposta = 1;
+    Frame FrameGameOver;
 
-    void Initialize()
+    public void Initialize()
     {
         Pontuacao = 0;
         NivelResposta = 1;
         ProximaQuestao();
+        FrameGameOver.IsVisible = false;
     }
 
     public Questao GetQuestaoAtual()
@@ -27,15 +30,16 @@ public class Gerenciador
         return questaoAtual;
     }
 
-    public Gerenciador(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05, Label labelNivel, Label labelPontuacao)
+    public Gerenciador(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05, Label labelNivel, Label labelPontuacao, Frame frameGameOver)
     {
-        CriarQuestoes(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        CriarQuestoes(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         this.labelNivel = labelNivel;
         this.labelPontuacao = labelPontuacao;
+        FrameGameOver = frameGameOver;
     }
 
     //Arrumar questões
-    void CriarQuestoes(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05)
+    void CriarQuestoes(Label labelPergunta, Button buttonResposta01, Button buttonResposta02, Button buttonResposta03, Button buttonResposta04, Button buttonResposta05, Frame frameGameOver)
     {
 
         var q1 = new Questao();
@@ -50,7 +54,7 @@ public class Gerenciador
         q1.Resposta5 = "0";
 
         q1.RespostaCerta = 3;
-        q1.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q1.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q1);
 
         var q2 = new Questao();
@@ -62,7 +66,7 @@ public class Gerenciador
         q2.Resposta5 = "Roma";
 
         q2.RespostaCerta = 2;
-        q2.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q2.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q2);
 
         var q3 = new Questao();
@@ -77,7 +81,7 @@ public class Gerenciador
         q3.Resposta5 = "Preto";
 
         q3.RespostaCerta = 2;
-        q3.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q3.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q3);
 
         var q4 = new Questao();
@@ -89,7 +93,7 @@ public class Gerenciador
         q4.Resposta5 = "Netuno";
 
         q4.RespostaCerta = 3;
-        q4.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q4.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q4);
 
         var q5 = new Questao();
@@ -101,7 +105,7 @@ public class Gerenciador
         q5.Resposta5 = "Graciliano Ramos";
 
         q5.RespostaCerta = 1;
-        q5.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q5.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q5);
 
         var q6 = new Questao();
@@ -113,7 +117,7 @@ public class Gerenciador
         q6.Resposta5 = "8";
 
         q6.RespostaCerta = 3;
-        q6.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q6.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q6);
 
         var q7 = new Questao();
@@ -125,7 +129,7 @@ public class Gerenciador
         q7.Resposta5 = "C6H12O6";
 
         q7.RespostaCerta = 1;
-        q7.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q7.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q7);
 
         var q8 = new Questao();
@@ -137,7 +141,7 @@ public class Gerenciador
         q8.Resposta5 = "Árabe";
 
         q8.RespostaCerta = 2;
-        q8.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q8.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q8);
 
         var q9 = new Questao();
@@ -149,7 +153,7 @@ public class Gerenciador
         q9.Resposta5 = "Michelangelo";
 
         q9.RespostaCerta = 2;
-        q9.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q9.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q9);
 
         var q10 = new Questao();
@@ -161,7 +165,7 @@ public class Gerenciador
         q10.Resposta5 = "Oceano Antártico";
 
         q10.RespostaCerta = 3;
-        q10.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q10.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q10);
 
         var q11 = new Questao();
@@ -173,7 +177,7 @@ public class Gerenciador
         q11.Resposta5 = "Nitrogênio";
 
         q11.RespostaCerta = 1;
-        q11.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q11.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q11);
 
         var q12 = new Questao();
@@ -188,7 +192,7 @@ public class Gerenciador
         q12.Resposta5 = "Gorila";
 
         q12.RespostaCerta = 3;
-        q12.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q12.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q12);
 
         var q13 = new Questao();
@@ -200,7 +204,7 @@ public class Gerenciador
         q13.Resposta5 = "Euro";
 
         q13.RespostaCerta = 3;
-        q13.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q13.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q13);
 
         var q14 = new Questao();
@@ -212,7 +216,7 @@ public class Gerenciador
         q14.Resposta5 = "Westminster Abbey";
 
         q14.RespostaCerta = 1;
-        q14.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q14.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q14);
 
         var q15 = new Questao();
@@ -224,7 +228,7 @@ public class Gerenciador
         q15.Resposta5 = "Eça de Queirós";
 
         q15.RespostaCerta = 1;
-        q15.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q15.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q15);
 
         var q16 = new Questao();
@@ -236,7 +240,7 @@ public class Gerenciador
         q16.Resposta5 = "Mercúrio";
 
         q16.RespostaCerta = 1;
-        q16.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q16.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q16);
 
         var q17 = new Questao();
@@ -251,7 +255,7 @@ public class Gerenciador
         q17.Resposta5 = "Orca";
 
         q17.RespostaCerta = 2;
-        q17.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q17.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q17);
 
         var q18 = new Questao();
@@ -263,7 +267,7 @@ public class Gerenciador
         q18.Resposta5 = "Veneza";
 
         q18.RespostaCerta = 1;
-        q18.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q18.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q18);
 
         var q19 = new Questao();
@@ -275,7 +279,7 @@ public class Gerenciador
         q19.Resposta5 = "Charles Darwin";
 
         q19.RespostaCerta = 2;
-        q19.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q19.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q19);
 
         var q20 = new Questao();
@@ -287,7 +291,7 @@ public class Gerenciador
         q20.Resposta5 = "Nova Zelândia";
 
         q20.RespostaCerta = 1;
-        q20.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q20.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q20);
 
         var q21 = new Questao();
@@ -299,7 +303,7 @@ public class Gerenciador
         q21.Resposta5 = "Judaísmo";
 
         q21.RespostaCerta = 2;
-        q21.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q21.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q21);
 
         var q22 = new Questao();
@@ -314,7 +318,7 @@ public class Gerenciador
         q22.Resposta5 = "Italiano";
 
         q22.RespostaCerta = 4;
-        q22.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q22.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q22);
 
         var q23 = new Questao();
@@ -326,7 +330,7 @@ public class Gerenciador
         q23.Resposta5 = "Liechtenstein";
 
         q23.RespostaCerta = 2;
-        q23.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q23.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q23);
 
         var q24 = new Questao();
@@ -338,7 +342,7 @@ public class Gerenciador
         q24.Resposta5 = "Michael Collins";
 
         q24.RespostaCerta = 2;
-        q24.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q24.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q24);
 
         var q25 = new Questao();
@@ -350,7 +354,7 @@ public class Gerenciador
         q25.Resposta5 = "Ff";
 
         q25.RespostaCerta = 1;
-        q25.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q25.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q25);
 
         var q26 = new Questao();
@@ -362,7 +366,7 @@ public class Gerenciador
         q26.Resposta5 = "Floresta Atlântica";
 
         q26.RespostaCerta = 1;
-        q26.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q26.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q26);
 
         var q27 = new Questao();
@@ -374,7 +378,7 @@ public class Gerenciador
         q27.Resposta5 = "Cervantes";
 
         q27.RespostaCerta = 2;
-        q27.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q27.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q27);
 
         var q28 = new Questao();
@@ -386,7 +390,7 @@ public class Gerenciador
         q28.Resposta5 = "Rio Mekong";
 
         q28.RespostaCerta = 1;
-        q28.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q28.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q28);
 
         var q29 = new Questao();
@@ -398,7 +402,7 @@ public class Gerenciador
         q29.Resposta5 = "Makalu";
 
         q29.RespostaCerta = 3;
-        q29.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q29.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q29);
 
         var q30 = new Questao();
@@ -410,7 +414,7 @@ public class Gerenciador
         q30.Resposta5 = "Deserto do Kalahari";
 
         q30.RespostaCerta = 4;
-        q30.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q30.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q30);
 
         var q31 = new Questao();
@@ -422,7 +426,7 @@ public class Gerenciador
         q31.Resposta5 = "Vitamina E";
 
         q31.RespostaCerta = 3;
-        q31.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q31.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q31);
 
         var q32 = new Questao();
@@ -437,7 +441,7 @@ public class Gerenciador
         q32.Resposta5 = "Coelho";
 
         q32.RespostaCerta = 1;
-        q32.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q32.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q32);
 
         var q33 = new Questao();
@@ -449,7 +453,7 @@ public class Gerenciador
         q33.Resposta5 = "Pirineus";
 
         q33.RespostaCerta = 2;
-        q33.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q33.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q33);
 
         var q34 = new Questao();
@@ -461,7 +465,7 @@ public class Gerenciador
         q34.Resposta5 = "Jean Piaget";
 
         q34.RespostaCerta = 2;
-        q34.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q34.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q34);
 
         var q35 = new Questao();
@@ -473,7 +477,7 @@ public class Gerenciador
         q35.Resposta5 = "Bilbau";
 
         q35.RespostaCerta = 2;
-        q35.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q35.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q35);
 
         var q36 = new Questao();
@@ -485,7 +489,7 @@ public class Gerenciador
         q36.Resposta5 = "Oceania";
 
         q36.RespostaCerta = 1;
-        q36.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q36.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q36);
 
         var q37 = new Questao();
@@ -497,7 +501,7 @@ public class Gerenciador
         q37.Resposta5 = "Tomorrowland";
 
         q37.RespostaCerta = 4;
-        q37.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q37.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q37);
 
         var q38 = new Questao();
@@ -509,7 +513,7 @@ public class Gerenciador
         q38.Resposta5 = "Argônio";
 
         q38.RespostaCerta = 3;
-        q38.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q38.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q38);
 
         var q39 = new Questao();
@@ -521,7 +525,7 @@ public class Gerenciador
         q39.Resposta5 = "Guernica";
 
         q39.RespostaCerta = 2;
-        q39.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q39.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q39);
 
         var q40 = new Questao();
@@ -533,7 +537,7 @@ public class Gerenciador
         q40.Resposta5 = "Tóquio";
 
         q40.RespostaCerta = 2;
-        q40.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q40.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q40);
 
         var q41 = new Questao();
@@ -548,7 +552,7 @@ public class Gerenciador
         q41.Resposta5 = "Hipopótamo";
 
         q41.RespostaCerta = 2;
-        q41.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q41.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q41);
 
         var q42 = new Questao();
@@ -560,7 +564,7 @@ public class Gerenciador
         q42.Resposta5 = "John Adams";
 
         q42.RespostaCerta = 2;
-        q42.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q42.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q42);
 
         var q43 = new Questao();
@@ -572,7 +576,7 @@ public class Gerenciador
         q43.Resposta5 = "Lima";
 
         q43.RespostaCerta = 1;
-        q43.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q43.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q43);
 
         var q44 = new Questao();
@@ -584,7 +588,7 @@ public class Gerenciador
         q44.Resposta5 = "Épsilon";
 
         q44.RespostaCerta = 2;
-        q44.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q44.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q44);
 
         var q45 = new Questao();
@@ -596,7 +600,7 @@ public class Gerenciador
         q45.Resposta5 = "Miss Marple";
 
         q45.RespostaCerta = 1;
-        q45.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q45.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q45);
 
         var q46 = new Questao();
@@ -608,7 +612,7 @@ public class Gerenciador
         q46.Resposta5 = "Cartum";
 
         q46.RespostaCerta = 1;
-        q46.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q46.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q46);
 
         var q47 = new Questao();
@@ -620,7 +624,7 @@ public class Gerenciador
         q47.Resposta5 = "Yen";
 
         q47.RespostaCerta = 3;
-        q47.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q47.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q47);
 
         var q48 = new Questao();
@@ -632,7 +636,7 @@ public class Gerenciador
         q48.Resposta5 = "Lollapalooza";
 
         q48.RespostaCerta = 1;
-        q48.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q48.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q48);
 
         var q49 = new Questao();
@@ -644,7 +648,7 @@ public class Gerenciador
         q49.Resposta5 = "Nikola Tesla";
 
         q49.RespostaCerta = 2;
-        q49.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q49.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q49);
 
         var q50 = new Questao();
@@ -656,7 +660,7 @@ public class Gerenciador
         q50.Resposta5 = "Holanda";
 
         q50.RespostaCerta = 3;
-        q50.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q50.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q50);
 
         var q51 = new Questao();
@@ -668,7 +672,7 @@ public class Gerenciador
         q51.Resposta5 = "Calgary";
 
         q51.RespostaCerta = 3;
-        q51.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q51.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q51);
 
         var q52 = new Questao();
@@ -680,7 +684,7 @@ public class Gerenciador
         q52.Resposta5 = "Porsche 911";
 
         q52.RespostaCerta = 3;
-        q52.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q52.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q52);
 
         var q53 = new Questao();
@@ -692,7 +696,7 @@ public class Gerenciador
         q53.Resposta5 = "Turquia";
 
         q53.RespostaCerta = 3;
-        q53.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q53.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q53);
 
         var q54 = new Questao();
@@ -704,7 +708,7 @@ public class Gerenciador
         q54.Resposta5 = "Teocracia";
 
         q54.RespostaCerta = 4;
-        q54.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q54.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q54);
 
         var q55 = new Questao();
@@ -716,7 +720,7 @@ public class Gerenciador
         q55.Resposta5 = "CO2";
 
         q55.RespostaCerta = 1;
-        q55.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q55.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q55);
 
         var q56 = new Questao();
@@ -728,7 +732,7 @@ public class Gerenciador
         q56.Resposta5 = "Colônia";
 
         q56.RespostaCerta = 1;
-        q56.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q56.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q56);
 
         var q57 = new Questao();
@@ -740,7 +744,7 @@ public class Gerenciador
         q57.Resposta5 = "Náuplia";
 
         q57.RespostaCerta = 1;
-        q57.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q57.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q57);
 
         var q58 = new Questao();
@@ -752,7 +756,7 @@ public class Gerenciador
         q58.Resposta5 = "Lago Tanganica";
 
         q58.RespostaCerta = 4;
-        q58.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q58.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q58);
 
         var q59 = new Questao();
@@ -764,7 +768,7 @@ public class Gerenciador
         q59.Resposta5 = "Hakka";
 
         q59.RespostaCerta = 2;
-        q59.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q59.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q59);
 
         var q60 = new Questao();
@@ -776,7 +780,7 @@ public class Gerenciador
         q60.Resposta5 = "Estátua da Liberdade";
 
         q60.RespostaCerta = 1;
-        q60.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q60.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q60);
 
         var q61 = new Questao();
@@ -788,7 +792,7 @@ public class Gerenciador
         q61.Resposta5 = "Fósforo";
 
         q61.RespostaCerta = 1;
-        q61.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q61.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q61);
 
         var q62 = new Questao();
@@ -803,7 +807,7 @@ public class Gerenciador
         q62.Resposta5 = "Salvador";
 
         q62.RespostaCerta = 3;
-        q62.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q62.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q62);
 
         var q63 = new Questao();
@@ -815,7 +819,7 @@ public class Gerenciador
         q63.Resposta5 = "Federalist Papers";
 
         q63.RespostaCerta = 3;
-        q63.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q63.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q63);
 
         var q64 = new Questao();
@@ -827,7 +831,7 @@ public class Gerenciador
         q64.Resposta5 = "Modernismo";
 
         q64.RespostaCerta = 3;
-        q64.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q64.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q64);
 
         var q65 = new Questao();
@@ -839,7 +843,7 @@ public class Gerenciador
         q65.Resposta5 = "A Revolução dos Bichos";
 
         q65.RespostaCerta = 1;
-        q65.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q65.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q65);
 
         var q66 = new Questao();
@@ -851,7 +855,7 @@ public class Gerenciador
         q66.Resposta5 = "Europa";
 
         q66.RespostaCerta = 1;
-        q66.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q66.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q66);
 
         var q67 = new Questao();
@@ -863,7 +867,7 @@ public class Gerenciador
         q67.Resposta5 = "Hyderabad";
 
         q67.RespostaCerta = 2;
-        q67.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q67.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q67);
 
         var q68 = new Questao();
@@ -875,7 +879,7 @@ public class Gerenciador
         q68.Resposta5 = "Oceano Antártico";
 
         q68.RespostaCerta = 2;
-        q68.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q68.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q68);
 
         var q69 = new Questao();
@@ -887,7 +891,7 @@ public class Gerenciador
         q69.Resposta5 = "Roma";
 
         q69.RespostaCerta = 4;
-        q69.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q69.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q69);
 
         var q70 = new Questao();
@@ -899,7 +903,7 @@ public class Gerenciador
         q70.Resposta5 = "Hubble";
 
         q70.RespostaCerta = 3;
-        q70.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q70.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q70);
 
         var q71 = new Questao();
@@ -911,7 +915,7 @@ public class Gerenciador
         q71.Resposta5 = "CH4";
 
         q71.RespostaCerta = 1;
-        q71.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q71.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q71);
 
         var q72 = new Questao();
@@ -923,7 +927,7 @@ public class Gerenciador
         q72.Resposta5 = "Reykjavique";
 
         q72.RespostaCerta = 1;
-        q72.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q72.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q72);
 
         var q73 = new Questao();
@@ -935,7 +939,7 @@ public class Gerenciador
         q73.Resposta5 = "Franco";
 
         q73.RespostaCerta = 3;
-        q73.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q73.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q73);
 
         var q74 = new Questao();
@@ -950,7 +954,7 @@ public class Gerenciador
         q74.Resposta5 = "Tico e Teco";
 
         q74.RespostaCerta = 1;
-        q74.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q74.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q74);
 
         var q75 = new Questao();
@@ -962,7 +966,7 @@ public class Gerenciador
         q75.Resposta5 = "Spider-Man";
 
         q75.RespostaCerta = 4;
-        q75.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q75.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q75);
 
         var q76 = new Questao();
@@ -974,7 +978,7 @@ public class Gerenciador
         q76.Resposta5 = "Charles Darwin";
 
         q76.RespostaCerta = 3;
-        q76.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q76.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q76);
 
         var q77 = new Questao();
@@ -986,7 +990,7 @@ public class Gerenciador
         q77.Resposta5 = "O Grito";
 
         q77.RespostaCerta = 1;
-        q77.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q77.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q77);
 
         var q78 = new Questao();
@@ -998,7 +1002,7 @@ public class Gerenciador
         q78.Resposta5 = "Dunedin";
 
         q78.RespostaCerta = 2;
-        q78.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q78.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q78);
 
         var q79 = new Questao();
@@ -1010,7 +1014,7 @@ public class Gerenciador
         q79.Resposta5 = "Sam Spade";
 
         q79.RespostaCerta = 3;
-        q79.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q79.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q79);
 
         var q80 = new Questao();
@@ -1025,7 +1029,7 @@ public class Gerenciador
         q80.Resposta5 = "Limão";
 
         q80.RespostaCerta = 3;
-        q80.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q80.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q80);
 
         var q81 = new Questao();
@@ -1037,7 +1041,7 @@ public class Gerenciador
         q81.Resposta5 = "Hanoí";
 
         q81.RespostaCerta = 1;
-        q81.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q81.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q81);
 
         var q82 = new Questao();
@@ -1049,7 +1053,7 @@ public class Gerenciador
         q82.Resposta5 = "Crime e Castigo";
 
         q82.RespostaCerta = 1;
-        q82.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q82.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q82);
 
         var q83 = new Questao();
@@ -1061,7 +1065,7 @@ public class Gerenciador
         q83.Resposta5 = "Bursa";
 
         q83.RespostaCerta = 2;
-        q83.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q83.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q83);
 
         var q84 = new Questao();
@@ -1073,7 +1077,7 @@ public class Gerenciador
         q84.Resposta5 = "Curry";
 
         q84.RespostaCerta = 4;
-        q84.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q84.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q84);
 
         var q85 = new Questao();
@@ -1085,7 +1089,7 @@ public class Gerenciador
         q85.Resposta5 = "Digestão";
 
         q85.RespostaCerta = 2;
-        q85.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q85.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q85);
 
         var q86 = new Questao();
@@ -1097,7 +1101,7 @@ public class Gerenciador
         q86.Resposta5 = "Come Together";
 
         q86.RespostaCerta = 1;
-        q86.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q86.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q86);
 
         var q87 = new Questao();
@@ -1109,7 +1113,7 @@ public class Gerenciador
         q87.Resposta5 = "Nápoles";
 
         q87.RespostaCerta = 2;
-        q87.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q87.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q87);
 
         var q88 = new Questao();
@@ -1124,7 +1128,7 @@ public class Gerenciador
         q88.Resposta5 = "Lanterna Verde";
 
         q88.RespostaCerta = 2;
-        q88.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q88.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q88);
 
         var q89 = new Questao();
@@ -1136,7 +1140,7 @@ public class Gerenciador
         q89.Resposta5 = "Banguecoque";
 
         q89.RespostaCerta = 1;
-        q89.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q89.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q89);
 
         var q90 = new Questao();
@@ -1148,7 +1152,7 @@ public class Gerenciador
         q90.Resposta5 = "Atena";
 
         q90.RespostaCerta = 1;
-        q90.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q90.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q90);
 
         var q91 = new Questao();
@@ -1160,7 +1164,7 @@ public class Gerenciador
         q91.Resposta5 = "A Criação de Adão";
 
         q91.RespostaCerta = 2;
-        q91.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q91.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q91);
 
         var q92 = new Questao();
@@ -1172,7 +1176,7 @@ public class Gerenciador
         q92.Resposta5 = "Reykjavique";
 
         q92.RespostaCerta = 1;
-        q92.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q92.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q92);
 
         var q93 = new Questao();
@@ -1184,7 +1188,7 @@ public class Gerenciador
         q93.Resposta5 = "Floresta de Taiga";
 
         q93.RespostaCerta = 1;
-        q93.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q93.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q93);
 
         var q94 = new Questao();
@@ -1196,7 +1200,7 @@ public class Gerenciador
         q94.Resposta5 = "Zurique";
 
         q94.RespostaCerta = 1;
-        q94.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q94.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q94);
 
         var q95 = new Questao();
@@ -1208,7 +1212,7 @@ public class Gerenciador
         q95.Resposta5 = "Percy Jackson";
 
         q95.RespostaCerta = 3;
-        q95.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q95.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q95);
 
         var q96 = new Questao();
@@ -1220,7 +1224,7 @@ public class Gerenciador
         q96.Resposta5 = "Reykjavique";
 
         q96.RespostaCerta = 1;
-        q96.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q96.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q96);
 
         var q97 = new Questao();
@@ -1232,7 +1236,7 @@ public class Gerenciador
         q97.Resposta5 = "Estocolmo";
 
         q97.RespostaCerta = 1;
-        q97.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q97.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q97);
 
         var q98 = new Questao();
@@ -1244,7 +1248,7 @@ public class Gerenciador
         q98.Resposta5 = "Libra";
 
         q98.RespostaCerta = 1;
-        q98.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q98.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q98);
 
         var q99 = new Questao();
@@ -1256,7 +1260,7 @@ public class Gerenciador
         q99.Resposta5 = "Guinness";
 
         q99.RespostaCerta = 2;
-        q99.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q99.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q99);
 
         var q100 = new Questao();
@@ -1268,7 +1272,7 @@ public class Gerenciador
         q100.Resposta5 = "Dundee";
 
         q100.RespostaCerta = 1;
-        q100.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+        q100.ConfiguraEstruturaDesenho(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05, frameGameOver);
         listaTodasQuestoes.Add(q100);
     }
 
@@ -1276,13 +1280,13 @@ public class Gerenciador
     {
 
         var listaQuestoes = listaTodasQuestoes.Where(d => d.NivelResposta == NivelResposta).ToList();
-        var numRandom = Random.Shared.Next(0, listaQuestoes.Count);
-        var NovaQuestao = listaQuestoes[numRandom];
+        var numRandom = Random.Shared.Next(0, listaTodasQuestoes.Count - 1);
+        var NovaQuestao = listaTodasQuestoes[numRandom];
 
         while (listaTodasQuestaoRespondidas.Contains(NovaQuestao))
         {
             numRandom = Random.Shared.Next(0, listaQuestoes.Count - 1);
-            NovaQuestao = listaQuestoes[numRandom];
+            NovaQuestao = listaTodasQuestoes[numRandom];
         }
 
         listaTodasQuestaoRespondidas.Add(NovaQuestao);
@@ -1303,7 +1307,8 @@ public class Gerenciador
         }
         else
         {
-            await App.Current.MainPage.DisplayAlert("Game Over", "Você perdeu", "Ok");
+            // await App.Current.MainPage.DisplayAlert("Game Over", "Você perdeu", "Ok");
+            FrameGameOver.IsVisible = true;
             Initialize();
         }
     }
