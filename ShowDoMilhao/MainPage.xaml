@@ -19,7 +19,7 @@
                 Grid.Row="1"
                 BackgroundColor="Transparent"
                 BorderColor="White"
-                BorderWidth="1"
+                BorderWidth="2"
                 Clicked="botaoComecar"
                 WidthRequest="300"
                 HeightRequest="50"

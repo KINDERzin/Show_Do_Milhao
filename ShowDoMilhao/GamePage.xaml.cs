@@ -1,15 +1,20 @@
-﻿namespace ShowDoMilhao;
+﻿using Microsoft.UI.Text;
+using Windows.Media.Capture.Core;
+
+namespace ShowDoMilhao;
 
 public partial class GamePage
 {
     Gerenciador gerenciador;
     Questao questao;
+    int i = 0;
     public GamePage()
     {
         InitializeComponent();
 
         gerenciador = new Gerenciador(labelPergunta, Resposta01, Resposta02, Resposta03, Resposta04, Resposta05, labelNivel, labelPontuacao, frameGameOver);
         gerenciador.ProximaQuestao();
+        
     }
 
     void clicouBotaoResposta01(object sender, EventArgs args)
@@ -85,7 +90,11 @@ public partial class GamePage
     void OnAjudaPulaClicked(object s, EventArgs e)
     {
         gerenciador.ProximaQuestao();
-        (s as Button).IsVisible = false;
+        i+= 1;
+        if (i > 2)
+        {
+            (s as Button).IsVisible = false;
+        }
     }
 
     void OnAjudaRetirarCliecked(object s, EventArgs e)

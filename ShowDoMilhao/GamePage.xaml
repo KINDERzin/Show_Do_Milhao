@@ -73,6 +73,7 @@
                                        MaximumWidthRequest="500"
                                        FontFamily="StalystaPersonal"/>
                         </Frame>
+
                         <!-- Botão de resposta 1-->
                         <Button x:Name="Resposta01"
                                 Clicked="clicouBotaoResposta01"
@@ -159,6 +160,7 @@
                                 Grid.Column="2"/>
                         <!--Frame de Universitários-->
                         <Frame BackgroundColor="Black"
+                                IsVisible="false"
                                BorderColor="White"
                                Margin="20"
                                x:Name="frameUniversitarios"
