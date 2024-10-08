@@ -136,17 +136,23 @@
                                 Grid.ColumnSpan="3"/>
                         <!-- Botão de ajuda(universitários)-->
                         <Button BackgroundColor="Black"
+                                Clicked="OnUniversitariosClicked"
                                 ImageSource="universitario.png"
+                                WidthRequest="90"
+                                HeightRequest="90"
                                 TextColor="Black"
                                 Margin="10, 10, 5,10"
                                 Grid.Row="9"
                                 Grid.Column="0"/>
                         <!-- Botão de ajuda(pular)-->
                         <Button BackgroundColor="Black"
-                                ImageSource="right_arrow.png"
+                                ImageSource="right_arrow_three.png"
+                                Text="3x"
+                                TextColor="White"
+                                x:Name="botaoPular"
                                 Clicked="OnAjudaPulaClicked"
-                                MaximumWidthRequest="64"
-                                TextColor="Black"
+                                WidthRequest="90"
+                                HeightRequest="90"
                                 Margin="5,10"
                                 Grid.Row="9"
                                 Grid.Column="1"/>
@@ -154,27 +160,27 @@
                         <Button BackgroundColor="Black"
                                 ImageSource="cartas.png"
                                 Clicked="OnAjudaRetirarCliecked"
+                                WidthRequest="90"
+                                HeightRequest="90"
                                 TextColor="Black"
                                 Margin="5, 10, 10, 10"
                                 Grid.Row="9"
                                 Grid.Column="2"/>
                         <!--Frame de Universitários-->
                         <Frame BackgroundColor="Black"
-                                IsVisible="false"
+                               IsVisible="true"
                                BorderColor="White"
                                Margin="20"
                                x:Name="frameUniversitarios"
                                Grid.RowSpan="10"
                                Grid.ColumnSpan="3">
                                 <VerticalStackLayout>
-                                        <Image Source="show_do_milhao.png"
-                                               Aspect="AspectFill"/>
-
                                         <Label Text="Universitários"
+                                               TextColor="White"
                                                HorizontalTextAlignment="Center"
                                                FontFamily="StalystaPersonal"
-                                               Margin="30, 10"
-                                               FontSize="24"/>
+                                               Margin="20, 100, 20, 10"
+                                               FontSize="50"/>
                                 </VerticalStackLayout>
                         </Frame>
                         <!--Frame de GameOver-->
