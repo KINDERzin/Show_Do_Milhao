@@ -181,6 +181,51 @@
                                                FontFamily="StalystaPersonal"
                                                Margin="20, 100, 20, 10"
                                                FontSize="50"/>
+
+                                        <Button x:Name="universitarioUm"
+                                                Clicked="ClicouBotaoUniversitario01"
+                                                BackgroundColor="Black"
+                                                BorderColor="White"
+                                                BorderWidth="1"
+                                                Margin="10,5"
+                                                TextColor="White"
+                                                FontSize="12"/>
+
+                                        <Button x:Name="universitarioDois"
+                                                Clicked="ClicouBotaoUniversitario02"
+                                                BackgroundColor="Black"
+                                                BorderColor="White"
+                                                BorderWidth="1"
+                                                Margin="10,5"
+                                                TextColor="White"
+                                                FontSize="12"/>
+
+                                        <Button x:Name="universitarioTres"
+                                                Clicked="ClicouBotaoUniversitario03"
+                                                BackgroundColor="Black"
+                                                BorderColor="White"
+                                                BorderWidth="1"
+                                                Margin="10,5"
+                                                TextColor="White"
+                                                FontSize="12"/>
+
+                                        <Button x:Name="universitarioQuatro"
+                                                Clicked="ClicouBotaoUniversitario04"
+                                                BackgroundColor="Black"
+                                                BorderColor="White"
+                                                BorderWidth="1"
+                                                Margin="10,5"
+                                                TextColor="White"
+                                                FontSize="12"/>
+
+                                        <Button x:Name="universitarioCinco"
+                                                Clicked="ClicouBotaoUniversitario05"
+                                                BackgroundColor="Black"
+                                                BorderColor="White"
+                                                BorderWidth="1"
+                                                Margin="10,5"
+                                                TextColor="White"
+                                                FontSize="12"/>
                                 </VerticalStackLayout>
                         </Frame>
                         <!--Frame de GameOver-->

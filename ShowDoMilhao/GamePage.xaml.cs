@@ -16,6 +16,26 @@ public partial class GamePage
 
     }
 
+    void ClicouBotaoUniversitario01(){
+
+    }
+
+    void ClicouBotaoUniversitario02(){
+        
+    }
+
+    void ClicouBotaoUniversitario03(){
+        
+    }
+
+    void ClicouBotaoUniversitario04(){
+        
+    }
+
+    void ClicouBotaoUniversitario05(){
+        
+    }
+
     void clicouBotaoResposta01(object sender, EventArgs args)
     {
         gerenciador.VerificaCorreta(1);
