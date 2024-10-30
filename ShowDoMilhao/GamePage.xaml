@@ -137,6 +137,7 @@
                         <!-- Botão de ajuda(universitários)-->
                         <Button BackgroundColor="Black"
                                 Clicked="OnUniversitariosClicked"
+                                x:Name="botaoUniversitarios"
                                 ImageSource="universitario.png"
                                 WidthRequest="90"
                                 HeightRequest="90"
@@ -168,9 +169,10 @@
                                 Grid.Column="2"/>
                         <!--Frame de Universitários-->
                         <Frame BackgroundColor="Black"
-                               IsVisible="true"
+                               IsVisible="false"
                                BorderColor="White"
-                               Margin="20"
+                               HeightRequest="500"
+                               WidthRequest="400"
                                x:Name="frameUniversitarios"
                                Grid.RowSpan="10"
                                Grid.ColumnSpan="3">
@@ -183,6 +185,7 @@
                                                FontSize="50"/>
 
                                         <Button x:Name="universitarioUm"
+                                                Text="Univesitário 01 - "
                                                 Clicked="ClicouBotaoUniversitario01"
                                                 BackgroundColor="Black"
                                                 BorderColor="White"
@@ -192,6 +195,7 @@
                                                 FontSize="12"/>
 
                                         <Button x:Name="universitarioDois"
+                                                Text="Univesitário 02 - "
                                                 Clicked="ClicouBotaoUniversitario02"
                                                 BackgroundColor="Black"
                                                 BorderColor="White"
@@ -201,6 +205,7 @@
                                                 FontSize="12"/>
 
                                         <Button x:Name="universitarioTres"
+                                                Text="Univesitário 03 - "
                                                 Clicked="ClicouBotaoUniversitario03"
                                                 BackgroundColor="Black"
                                                 BorderColor="White"
@@ -210,6 +215,7 @@
                                                 FontSize="12"/>
 
                                         <Button x:Name="universitarioQuatro"
+                                                Text="Univesitário 04 - "
                                                 Clicked="ClicouBotaoUniversitario04"
                                                 BackgroundColor="Black"
                                                 BorderColor="White"
@@ -219,6 +225,7 @@
                                                 FontSize="12"/>
 
                                         <Button x:Name="universitarioCinco"
+                                                Text="Univesitário 05 - "
                                                 Clicked="ClicouBotaoUniversitario05"
                                                 BackgroundColor="Black"
                                                 BorderColor="White"
